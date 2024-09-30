@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dávisson</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo"><span>Dávisson Falcão</span></a>
+    <ul class="nav-links">
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+    <button class="visit-btn" id="visit-btn">Visit Github</button>
+</header>
+
+<section id="about" class="about">
+    <div class="about-container">
+        <img src="imgs/fotoeu.jpeg">
+
+        <div class="info-box">
+            <div class="text">
+                <h3>Hi, I'm</h3>
+                <h1>Dávisson Falcão</h1>
+                <p>I am a passionate front-end developer with a strong focus on creating responsive, user-friendly web applications. With expertise in HTML, CSS, JavaScript, and modern frameworks like Vue.js and React. I enjoy solving complex problems through clean, maintainable code and continuously exploring new technologies to enhance my skills. Check out some of the projects I've worked on below!</p>
+                <span>Front-End Developer</span>
+            </div>
+
+            <div class="btn-group">
+                <div class="btn"><a href="curriculo/Internship Resume Dávisson Falcao.pdf" download>Download CV</a></div>
+                <div class="btn" id="contactBtn">Contact</div>
+            </div>
+
+            <div class="socials">
+                <i class="fa-brands fa-github" id="github-icon"></i>
+                <i class="fa-brands fa-linkedin" id="linkedin-icon"></i>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="experience">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-info">
+
+
+        <div class="grid">
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Front-End Development</span>
+                    <h3>1 Year</h3>
+                    <p>A skilled Frontend Developer experienced in building responsive, user-friendly web applications using HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.</p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span>Marketing</span>
+                    <h3>5 Months</h3>
+                    <p>My dropshipping experience gave me strong knowledge of digital marketing. This helps me create front-end solutions that are not only visually appealing but also optimized for user engagement and sales, aligning with business goals. </p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Graphic Design</span>
+                    <h3>1 Year</h3>
+                    <p>In Front-End Development knows about Graphic Design is very important, I have a solid knowladge using Figma, Photoshop and Canva</p>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-video"></i>
+                    <span>Content Manager</span>
+                    <h3>3 Year</h3>
+                    <p>Content creator that gives Tips and Codes exemples on Youtube and Instagram</p>
+                </div>
+        </div>
+
+        <img src="imgs/fotoeu.jpeg">
+    </div>
+</section>
+
+<section id="projects" class="projects">
+
+    <h2 class="section-title">Recent Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="imgs/conversor.png" alt="">
+            <h3>Currency Converter</h3>
+            <p>A Currency Converter using HTML, CSS, JS and doing an API integration</p>
+            <div class="btn-group">
+                <div class="btn" id="demo-converter">Live Demo</div>
+                <div class="btn" id="converter-repo">Github Repo</div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="imgs/memorygame.png" alt="">
+            <h3>One Piece - Memory Game</h3>
+            <p>A One Piece memory game, in this project I've learned a lot about JS and CSS</p>
+            <div class="btn-group">
+                <div class="btn" id="demo-memo">Live Demo</div>
+                <div class="btn" id="memogame-repo">Github Repo</div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="imgs/loginscreen.png" alt="">
+            <h3>Responsive Login Screen</h3>
+            <p>One of my first responsive projects, it was made with HTML and CSS</p>
+            <div class="btn-group">
+                <div class="btn" id="loginscreen-repo">Github Repo</div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+    <div class="input-box">
+
+        <h2 class="section-title">Contact Me</h2>
+        <div class="card-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <h4>Email</h4>
+        <p>davissonbeat@gmail.com</p>
+        </div>
+       
+        <div class="card-contact">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h4>Phone</h4>
+            <p>+55 (81) 98177-6795</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+
+    <ul>
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+
+    <p class="copyright">© All Rights Reserved | Dávisson Falcão</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
