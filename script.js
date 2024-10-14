@@ -17,24 +17,28 @@ document.getElementById("linkedin-icon").addEventListener('click', ()=>{
     window.open("https://www.linkedin.com/in/d%C3%A1visson-falc%C3%A3o-602132321/", "_blank");
 });
 
-document.getElementById("converter-repo").addEventListener('click', ()=>{
-    window.open("https://github.com/DavissonJr/currency-converter", "_blank");
+document.getElementById("repo-1").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/Controle-de-Financas", "_blank");
 });
 
 document.getElementById("memogame-repo").addEventListener('click', ()=>{
     window.open("https://github.com/DavissonJr/Memory-Game", "_blank");
 });
 
-document.getElementById("loginscreen-repo").addEventListener('click', ()=>{
-    window.open("https://github.com/DavissonJr/Responsive-Login-Screen", "_blank");
+document.getElementById("repo-3").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/todo-vuejs", "_blank");
 });
 
-document.getElementById("demo-converter").addEventListener('click', ()=>{
-    window.open("https://currency-converter-psi-drab.vercel.app/", "_blank");
+document.getElementById("demo-1").addEventListener('click', ()=>{
+    window.open("https://controle-de-financas-seven.vercel.app/", "_blank");
 });
 
 document.getElementById("demo-memo").addEventListener('click', ()=>{
     window.open("https://onepiece-memorygame.vercel.app/", "_blank");
+});
+
+document.getElementById("demo-3").addEventListener('click', ()=>{
+    window.open("https://todo-vuejs-peach.vercel.app/", "_blank");
 });
 
 document.getElementById("visit-btn").addEventListener('click', ()=>{
