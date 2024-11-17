@@ -151,20 +151,7 @@ section{
     font-size: 2rem;  
 }
 
-.btn-group{
-    display: flex;
-    gap: 1rem;
-}
 
-.btn{
-    border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid black;
-    cursor: pointer;
-    font-weight: 500;
-    text-wrap: nowrap;
-    transition: 0.2s ease-in-out;
-}
 
 .btn a{
     color: black;
@@ -265,7 +252,7 @@ section{
 
 .projects-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(45%, 2fr));
     gap: 2rem;
 }
 
@@ -278,9 +265,28 @@ section{
     text-align: center;
     gap: 1.5rem;
     border: 2px solid black;
-    border-radius: 3rem;
+    border-radius: 1rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+}
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.2s ease-in-out;
+    width: auto;
+    max-width: 100%;
 }
 
 .project-card:hover{

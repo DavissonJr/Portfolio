@@ -44,3 +44,32 @@ document.getElementById("demo-3").addEventListener('click', ()=>{
 document.getElementById("visit-btn").addEventListener('click', ()=>{
     window.open("https://github.com/davissonjr", "_blank");
 });
+
+
+document.getElementById("demo-pix").addEventListener('click', ()=>{
+    window.open("https://pixel-art-bay-eight.vercel.app/", "_blank");
+});
+
+
+document.getElementById("demo-cnv").addEventListener('click', ()=>{
+    window.open("https://currency-converter-psi-drab.vercel.app/", "_blank");
+});
+
+
+document.getElementById("demo-gym").addEventListener('click', ()=>{
+    window.open("https://gym-websit-veturfit.vercel.app/", "_blank");
+});
+
+document.getElementById("repo-pix").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/pixelArt", "_blank");
+});
+
+
+document.getElementById("repo-cnv").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/currency-converter", "_blank");
+});
+
+
+document.getElementById("repo-gym").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/gym-websit---veturfit", "_blank");
+});
