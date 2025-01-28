@@ -73,3 +73,19 @@ document.getElementById("repo-cnv").addEventListener('click', ()=>{
 document.getElementById("repo-gym").addEventListener('click', ()=>{
     window.open("https://github.com/DavissonJr/gym-websit---veturfit", "_blank");
 });
+
+document.getElementById("repo-anime").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/animefind", "_blank");
+});
+
+document.getElementById("demo-anime").addEventListener('click', ()=>{
+    window.open("https://animefind.vercel.app/", "_blank");
+});
+
+document.getElementById("repo-hotdog").addEventListener('click', ()=>{
+    window.open("https://github.com/DavissonJr/delicioushotdog", "_blank");
+});
+
+document.getElementById("demo-hotdog").addEventListener('click', ()=>{
+    window.open("https://www.instagram.com/p/DEQsqwNK3ab/", "_blank");
+});
