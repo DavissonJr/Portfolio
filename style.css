@@ -483,4 +483,24 @@ footer ul li a{
     footer ul{
         gap: 1rem;
     }
+
+    .language-switcher {
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+    }
+
+    .lang-btn {
+        background: linear-gradient(to right, rgb(0, 152, 255), rgb(255, 0, 255));
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .lang-btn.active {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
 }
