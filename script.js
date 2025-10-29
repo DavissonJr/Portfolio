@@ -22,20 +22,20 @@ const translations = {
       sixMonths: '6 Months',
       devopsParagraph: "I'm a Git admirer and this makes me interested about Devops segments like Docker, Linux, Cloud and Networks, I'm studying all of the fundamentals and I love it, Devops is really amazing.",
       recentProjects: 'Recent Projects',
-      pixelArtTitle: 'PixelArt',
-      pixelArtParagraph: 'A PixelArt app, that you could download your art, made using JavaScript',
+      kiQuizTitle: 'KiQuiz',
+      kiQuizParagraph: 'A Quiz Application developed in React, integrated with Gemini API to fetch dynamic questions and evaluate user answers.',
       deliciousHotDogTitle: 'Delicious HotDog',
       deliciousHotDogParagraph: 'A Vue.js project simulating a hot dog restaurant, where users customize orders and manage menu data via json-server with CRUD operations.',
       animeFindTitle: 'AnimeFind',
       animeFindParagraph: 'You can search for detailed information about anime, view images and navigate in a simple and practical way. Developed in Vue.js, using Jikan API v4 and SCSS',
       memoryGameTitle: 'One Piece - Memory Game',
       memoryGameParagraph: "A One Piece memory game, in this project I've learned a lot about JS and CSS",
-      veturFitTitle: 'VeturFIT',
-      veturFitParagraph: 'A Gym Website made in HTML, CSS and JavaScript',
+      hrSystemTitle: 'HR Management System',
+      hrSystemParagraph: 'A HR System, fullstack project using Vanilla JS, C# (.NET) and SQL Server, the API allows me to add employees and companies',
       todoListTitle: 'Todo List',
       todoListParagraph: 'A Todo List to organize your pending issues',
-      currencyConverterTitle: 'Currency Converter',
-      currencyConverterParagraph: "A Currency Converter using JavaScript and API's",
+      coursesApiTitle: 'Courses Management API',
+      coursesApiParagraph: 'A Courses management API developed in .NET, that allows me to add courses, students, teachers and relate all of them.',
       incomeTrackerTitle: 'Income Tracker',
       incomeTrackerParagraph: 'A finance management application made using Vue.js',
       contactMe: 'Contact Me',
@@ -69,20 +69,20 @@ const translations = {
       sixMonths: '6 Meses',
       devopsParagraph: "Sou um admirador do Git e isso me faz interessar por segmentos de DevOps como Docker, Linux, Cloud e Redes, estou estudando todos os fundamentos e adoro, DevOps é realmente incrível.",
       recentProjects: 'Projetos Recentes',
-      pixelArtTitle: 'PixelArt',
-      pixelArtParagraph: 'Um app de PixelArt, onde você pode baixar sua arte, feito usando JavaScript',
+      kiQuizTitle: 'KiQuiz',
+      kiQuizParagraph: 'Uma Aplicação de Quiz desenvolvida em React, integrada com a API Gemini para buscar perguntas dinâmicas e avaliar respostas do usuário.',
       deliciousHotDogTitle: 'Delicious HotDog',
       deliciousHotDogParagraph: 'Um projeto Vue.js simulando um restaurante de hot dog, onde usuários personalizam pedidos e gerenciam dados do menu via json-server com operações CRUD.',
       animeFindTitle: 'AnimeFind',
       animeFindParagraph: 'Você pode buscar informações detalhadas sobre animes, ver imagens e navegar de forma simples e prática. Desenvolvido em Vue.js, usando Jikan API v4 e SCSS',
       memoryGameTitle: 'One Piece - Jogo da Memória',
       memoryGameParagraph: 'Um jogo da memória de One Piece, nesse projeto aprendi muito sobre JS e CSS',
-      veturFitTitle: 'VeturFIT',
-      veturFitParagraph: 'Um site de Academia feito em HTML, CSS e JavaScript',
+      hrSystemTitle: 'Sistema de Gerenciamento de RH',
+      hrSystemParagraph: 'Um Sistema de RH, projeto fullstack usando Vanilla JS, C# (.NET) e SQL Server, a API permite adicionar funcionários e empresas',
       todoListTitle: 'Lista de Tarefas',
       todoListParagraph: 'Uma Lista de Tarefas para organizar suas pendências',
-      currencyConverterTitle: 'Conversor de Moedas',
-      currencyConverterParagraph: 'Um Conversor de Moedas usando JavaScript e APIs',
+      coursesApiTitle: 'API de Gerenciamento de Cursos',
+      coursesApiParagraph: 'Uma API de gerenciamento de cursos desenvolvida em .NET, que permite adicionar cursos, estudantes, professores e relacioná-los todos.',
       incomeTrackerTitle: 'Rastreador de Renda',
       incomeTrackerParagraph: 'Uma aplicação de gerenciamento de finanças feita usando Vue.js',
       contactMe: 'Contate-me',
@@ -135,38 +135,36 @@ const translations = {
     // Projects section
     document.querySelector('#projects .section-title').innerText = translations[lang].recentProjects;
     const projectCards = document.querySelectorAll('.project-card');
-    projectCards[0].querySelector('h3').innerText = translations[lang].pixelArtTitle;
-    projectCards[0].querySelector('p').innerText = translations[lang].pixelArtParagraph;
+    projectCards[0].querySelector('h3').innerText = translations[lang].kiQuizTitle;
+    projectCards[0].querySelector('p').innerText = translations[lang].kiQuizParagraph;
     projectCards[1].querySelector('h3').innerText = translations[lang].deliciousHotDogTitle;
     projectCards[1].querySelector('p').innerText = translations[lang].deliciousHotDogParagraph;
     projectCards[2].querySelector('h3').innerText = translations[lang].animeFindTitle;
     projectCards[2].querySelector('p').innerText = translations[lang].animeFindParagraph;
     projectCards[3].querySelector('h3').innerText = translations[lang].memoryGameTitle;
     projectCards[3].querySelector('p').innerText = translations[lang].memoryGameParagraph;
-    projectCards[4].querySelector('h3').innerText = translations[lang].veturFitTitle;
-    projectCards[4].querySelector('p').innerText = translations[lang].veturFitParagraph;
+    projectCards[4].querySelector('h3').innerText = translations[lang].hrSystemTitle;
+    projectCards[4].querySelector('p').innerText = translations[lang].hrSystemParagraph;
     projectCards[5].querySelector('h3').innerText = translations[lang].todoListTitle;
     projectCards[5].querySelector('p').innerText = translations[lang].todoListParagraph;
-    projectCards[6].querySelector('h3').innerText = translations[lang].currencyConverterTitle;
-    projectCards[6].querySelector('p').innerText = translations[lang].currencyConverterParagraph;
+    projectCards[6].querySelector('h3').innerText = translations[lang].coursesApiTitle;
+    projectCards[6].querySelector('p').innerText = translations[lang].coursesApiParagraph;
     projectCards[7].querySelector('h3').innerText = translations[lang].incomeTrackerTitle;
     projectCards[7].querySelector('p').innerText = translations[lang].incomeTrackerParagraph;
   
     // Project buttons
-    document.getElementById('demo-pix').innerText = translations[lang].liveDemo;
-    document.getElementById('repo-pix').innerText = translations[lang].githubRepo;
+    document.getElementById('demo-quiz').innerText = translations[lang].liveDemo;
+    document.getElementById('repo-quiz').innerText = translations[lang].githubRepo;
     document.getElementById('demo-hotdog').innerText = translations[lang].videoDemo;
     document.getElementById('repo-hotdog').innerText = translations[lang].githubRepo;
     document.getElementById('demo-anime').innerText = translations[lang].liveDemo;
     document.getElementById('repo-anime').innerText = translations[lang].githubRepo;
     document.getElementById('demo-memo').innerText = translations[lang].liveDemo;
     document.getElementById('memogame-repo').innerText = translations[lang].githubRepo;
-    document.getElementById('demo-gym').innerText = translations[lang].liveDemo;
-    document.getElementById('repo-gym').innerText = translations[lang].githubRepo;
+    document.getElementById('repo-hr').innerText = translations[lang].githubRepo;
     document.getElementById('demo-3').innerText = translations[lang].liveDemo;
     document.getElementById('repo-3').innerText = translations[lang].githubRepo;
-    document.getElementById('demo-cnv').innerText = translations[lang].liveDemo;
-    document.getElementById('repo-cnv').innerText = translations[lang].githubRepo;
+    document.getElementById('repo-apic').innerText = translations[lang].githubRepo;
     document.getElementById('demo-1').innerText = translations[lang].liveDemo;
     document.getElementById('repo-1').innerText = translations[lang].githubRepo;
   
@@ -248,32 +246,23 @@ const translations = {
   });
   
   
-  document.getElementById("demo-pix").addEventListener('click', ()=>{
-      window.open("https://pixel-art-bay-eight.vercel.app/", "_blank");
+  document.getElementById("demo-quiz").addEventListener('click', ()=>{
+      window.open("https://study-app-ia.vercel.app/", "_blank");
   });
   
   
-  document.getElementById("demo-cnv").addEventListener('click', ()=>{
-      window.open("https://currency-converter-psi-drab.vercel.app/", "_blank");
+  document.getElementById("repo-quiz").addEventListener('click', ()=>{
+      window.open("https://github.com/DavissonJr/KiQuiz-IA", "_blank");
   });
   
   
-  document.getElementById("demo-gym").addEventListener('click', ()=>{
-      window.open("https://gym-websit-veturfit.vercel.app/", "_blank");
-  });
-  
-  document.getElementById("repo-pix").addEventListener('click', ()=>{
-      window.open("https://github.com/DavissonJr/pixelArt", "_blank");
+  document.getElementById("repo-apic").addEventListener('click', ()=>{
+      window.open("https://github.com/DavissonJr/api-gerenciamento-cursos", "_blank");
   });
   
   
-  document.getElementById("repo-cnv").addEventListener('click', ()=>{
-      window.open("https://github.com/DavissonJr/currency-converter", "_blank");
-  });
-  
-  
-  document.getElementById("repo-gym").addEventListener('click', ()=>{
-      window.open("https://github.com/DavissonJr/gym-websit---veturfit", "_blank");
+  document.getElementById("repo-hr").addEventListener('click', ()=>{
+      window.open("https://github.com/DavissonJr/hr-management-system", "_blank");
   });
   
   document.getElementById("repo-anime").addEventListener('click', ()=>{
