@@ -89,8 +89,8 @@ const translations = {
       email: 'Email',
       phone: 'Telefone',
       copyright: '© Todos os Direitos Reservados | Dávisson Falcão',
-      liveDemo: 'Demonstração Ao Vivo',
-      videoDemo: 'Demo em Vídeo',
+      liveDemo: 'Demonstração',
+      videoDemo: 'Demonstração',
       githubRepo: 'Repositório Github'
     }
   };
