@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,34 +11,35 @@
     />
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="logo"><span>Dávisson Falcão</span></a>
+    <header>
+      <a href="#" class="logo">Dávisson Falcão .</a>
+
       <ul class="nav-links">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-      <button class="visit-btn" id="visit-btn">Visit Github</button>
+      <div class="header-right">
+        <button id="theme-toggle" class="theme-btn">
+          <i class="fa-solid fa-moon"></i>
+          <!-- Muda para fa-sun no JS -->
+        </button>
 
-      <div class="language-switcher">
-        <button id="lang-en" class="lang-btn">
-          <img src="https://flagcdn.com/us.svg" alt="English" width="24" />
-        </button>
-        <button id="lang-pt" class="lang-btn">
-          <img src="https://flagcdn.com/br.svg" alt="Português" width="24" />
-        </button>
+        <div class="language-switcher">
+          <button id="lang-en" class="lang-btn active">
+            <img src="https://flagcdn.com/us.svg" alt="English" width="24" />
+          </button>
+          <button id="lang-pt" class="lang-btn">
+            <img src="https://flagcdn.com/br.svg" alt="Português" width="24" />
+          </button>
+        </div>
+
+        <button class="visit-btn" id="visit-btn">Visit GitHub</button>
       </div>
     </header>
 
@@ -76,6 +77,60 @@
             <i class="fa-brands fa-github" id="github-icon"></i>
             <i class="fa-brands fa-linkedin" id="linkedin-icon"></i>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2 class="section-title">Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS3 / Tailwind</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-react"></i>
+          <p>React</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-vuejs"></i>
+          <p>Vue.js</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-angular"></i>
+          <p>Angular</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-typescript"></i>
+          <p>TypeScript</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-server"></i>
+          <p>C# / .NET</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <p>SQL Server / Postgres</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt"></i>
+          <p>Git</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-docker"></i>
+          <p>Docker</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code"></i>
+          <p>Entity Framework / Dapper</p>
         </div>
       </div>
     </section>
@@ -130,8 +185,6 @@
             </p>
           </div>
         </div>
-
-        <img src="imgs/fotoeu.jpeg" />
       </div>
     </section>
 
