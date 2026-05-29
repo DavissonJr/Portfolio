@@ -3,277 +3,173 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dávisson Falcão · Full-Stack Portfolio</title>
+    <title>Dávisson Falcão · CYBER//DECK</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <a href="#" class="logo">Dávisson Falcão</a>
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="header-right">
-        <button id="theme-toggle" class="theme-btn">
-          <i class="fa-solid fa-moon"></i>
+    <div class="cyber-grid"></div>
+    <div class="noise"></div>
+    <div class="scanline"></div>
+
+    <aside class="cyber-sidebar" id="cyberSidebar">
+      <div class="glitch-logo" data-text="DF">DF</div>
+      <nav class="cyber-nav">
+        <a href="#about" class="cyber-link" data-section="about">
+          <i class="fa-solid fa-user-astronaut"></i>
+          <span>>_ ABOUT</span>
+        </a>
+        <a href="#skills" class="cyber-link" data-section="skills">
+          <i class="fa-solid fa-microchip"></i>
+          <span>>_ STACK</span>
+        </a>
+        <a href="#experience" class="cyber-link" data-section="experience">
+          <i class="fa-solid fa-terminal"></i>
+          <span>>_ LOGS</span>
+        </a>
+        <a href="#projects" class="cyber-link" data-section="projects">
+          <i class="fa-solid fa-cube"></i>
+          <span>>_ REPOS</span>
+        </a>
+        <a href="#production" class="cyber-link" data-section="production">
+          <i class="fa-solid fa-satellite"></i>
+          <span>>_ DEPLOY</span>
+        </a>
+        <a href="#contact" class="cyber-link" data-section="contact">
+          <i class="fa-solid fa-radio"></i>
+          <span>>_ SIGNAL</span>
+        </a>
+      </nav>
+      <div class="cyber-footer">
+        <button id="cyberTheme" class="cyber-icon">
+          <i class="fa-solid fa-display"></i>
         </button>
-        <div class="language-switcher">
-          <button id="lang-en" class="lang-btn">
-            <img src="https://flagcdn.com/us.svg" alt="EN" />
-          </button>
-          <button id="lang-pt" class="lang-btn">
-            <img src="https://flagcdn.com/br.svg" alt="PT" />
-          </button>
+        <div class="cyber-lang">
+          <button class="cyber-lang-btn" data-lang="en">[EN]</button>
+          <button class="cyber-lang-btn" data-lang="pt">[PT]</button>
         </div>
-        <button class="visit-btn" id="visit-btn">Visit GitHub</button>
       </div>
-    </header>
+    </aside>
 
-    <section id="about" class="about">
-      <div class="about-container">
-        <img src="imgs/fotoeu.jpeg" alt="Dávisson Falcão" />
-        <div class="info-box">
-          <h3>Hello, I'm</h3>
-          <h1>Dávisson Falcão</h1>
-          <p>
-            I am a passionate full-stack developer with expertise in JavaScript,
-            TypeScript, React, C#, .NET, Vue.js and Angular. I create responsive
-            web applications and secure APIs with clean, maintainable code.
-          </p>
-          <span>Full-Stack Developer</span>
-          <div class="btn-group">
-            <div class="btn">
-              <a href="curriculo/CURRICULO DAVISSON FALCAO 2025.pdf" download
-                >Download CV</a
-              >
+    <div class="mobile-trigger" id="mobileTrigger">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+
+    <main class="cyber-main">
+      <section id="about" class="cyber-section">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <div class="status-led">
+              <span class="led-red"></span> SYSTEM ONLINE //
+              <span id="datetime"></span>
             </div>
-            <div class="btn" id="contactBtn">Contact Me</div>
+            <div class="glitch-title">
+              <h1 class="glitch" data-text="DAVISSON FALCAO">
+                DAVISSON FALCAO
+              </h1>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span id="terminalTyping" class="cmd-line"></span
+              ><span class="cursor-blink">_</span>
+            </div>
+            <p class="cyber-desc" id="aboutDesc">
+              Full-stack engineer & digital architect. Building the future one
+              line of code at a time.
+            </p>
+            <div class="cyber-buttons">
+              <a
+                href="curriculo/CURRICULO DAVISSON FALCAO 2025.pdf"
+                download
+                class="cyber-btn primary"
+              >
+                <i class="fa-regular fa-file-zipper"></i> DOWNLOAD.CV
+              </a>
+              <button id="cyberContactBtn" class="cyber-btn secondary">
+                <i class="fa-solid fa-satellite-dish"></i> ESTABLISH.CONTACT
+              </button>
+            </div>
+            <div class="cyber-socials">
+              <div class="social-node" id="gitNode">
+                <i class="fa-brands fa-github"></i> <span>GITHUB</span>
+              </div>
+              <div class="social-node" id="liNode">
+                <i class="fa-brands fa-linkedin"></i> <span>LINKEDIN</span>
+              </div>
+            </div>
           </div>
-          <div class="socials">
-            <i class="fa-brands fa-github" id="github-icon"></i>
-            <i class="fa-brands fa-linkedin" id="linkedin-icon"></i>
+          <div class="hero-right">
+            <div class="hologram-avatar">
+              <div class="scan-ring"></div>
+              <div class="scan-ring-2"></div>
+              <img src="imgs/fotoeu.jpeg" alt="Dávisson" />
+              <div class="avatar-stats">
+                <div class="stat-bar">
+                  <span>XP_LEVEL</span> <span>[||||||||||] 92%</span>
+                </div>
+                <div class="stat-bar">
+                  <span>ENERGY</span> <span>[||||||||||] 100%</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills" class="skills">
-      <h2 class="section-title">Skills & Technologies</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fa-brands fa-html5"></i>
-          <p>HTML5</p>
+      <section id="skills" class="cyber-section">
+        <div class="section-header">
+          <span class="section-badge">// $ echo $SKILLS</span>
+          <h2>TECHNOLOGY_MATRIX</h2>
         </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-css3-alt"></i>
-          <p>CSS3/Tailwind</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-js"></i>
-          <p>JavaScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-react"></i>
-          <p>React</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-vuejs"></i>
-          <p>Vue.js</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-angular"></i>
-          <p>Angular</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-typescript"></i>
-          <p>TypeScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-server"></i>
-          <p>C# / .NET</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-database"></i>
-          <p>SQL Server/PG</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-git-alt"></i>
-          <p>Git</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-docker"></i>
-          <p>Docker</p>
-        </div>
-        <div class="skill-card">
-          <i class="fa-solid fa-cloud"></i>
-          <p>Azure/AWS</p>
-        </div>
-      </div>
-    </section>
+        <div class="matrix-grid" id="matrixGrid"></div>
+      </section>
 
-    <section id="experience" class="experience">
-      <h2 class="section-title">Work Experience</h2>
-      <div class="grid">
-        <div class="grid-card">
-          <i class="fa-solid fa-code"></i><span>Front-End Development</span>
-          <h3>2+ Years</h3>
-          <p>
-            Expert in React, Vue, Angular with responsive design and modern
-            animations.
-          </p>
+      <section id="experience" class="cyber-section">
+        <div class="section-header">
+          <span class="section-badge">// $ cat experience.log</span>
+          <h2>TERMINAL_LOGS</h2>
         </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-file-code"></i><span>Back-End Development</span>
-          <h3>1+ Year</h3>
-          <p>
-            C#/.NET, REST APIs, SQL Server, PostgreSQL, Entity Framework,
-            Dapper.
-          </p>
-        </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-palette"></i><span>UI/UX Design</span>
-          <h3>1 Year</h3>
-          <p>Figma, Canva, modern interface design and prototyping.</p>
-        </div>
-        <div class="grid-card">
-          <i class="fa-solid fa-cloud-arrow-up"></i><span>DevOps</span>
-          <h3>6 Months</h3>
-          <p>Docker, Git workflows, Linux, Cloud fundamentals.</p>
-        </div>
-      </div>
-    </section>
+        <div class="timeline-terminal" id="timelineTerminal"></div>
+      </section>
 
-    <section id="projects" class="projects">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="imgs/quiz.png" alt="KiQuiz" />
-          <h3>KiQuiz</h3>
-          <p>React quiz app with Gemini AI integration.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-quiz">Live Demo</div>
-            <div class="btn" id="repo-quiz">GitHub</div>
-          </div>
+      <section id="projects" class="cyber-section">
+        <div class="section-header">
+          <span class="section-badge">// $ ls -la /projects</span>
+          <h2>DEPLOYED_NODES</h2>
         </div>
-        <div class="project-card">
-          <img src="imgs/delicioushotdog.png" alt="HotDog" />
-          <h3>Delicious HotDog</h3>
-          <p>Vue.js restaurant simulator with CRUD operations.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-hotdog">Video Demo</div>
-            <div class="btn" id="repo-hotdog">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/animefindpic.png" alt="AnimeFind" />
-          <h3>AnimeFind</h3>
-          <p>Anime search using Jikan API v4.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-anime">Live Demo</div>
-            <div class="btn" id="repo-anime">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/memorygame.png" alt="Memory Game" />
-          <h3>One Piece Memory Game</h3>
-          <p>Interactive memory game with JavaScript.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-memo">Live Demo</div>
-            <div class="btn" id="memogame-repo">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/hrsystem.png" alt="HR System" />
-          <h3>HR Management System</h3>
-          <p>Fullstack .NET + Vanilla JS management system.</p>
-          <div class="btn-group">
-            <div class="btn" id="repo-hr">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/todolist.png" alt="Todo List" />
-          <h3>Todo List</h3>
-          <p>Task organizer built with Vue.js.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-3">Live Demo</div>
-            <div class="btn" id="repo-3">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/api.png" alt="Courses API" />
-          <h3>Courses Management API</h3>
-          <p>.NET REST API for course management.</p>
-          <div class="btn-group">
-            <div class="btn" id="repo-apic">GitHub</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="imgs/incometracker.png" alt="Income Tracker" />
-          <h3>Income Tracker</h3>
-          <p>Finance management with Vue.js.</p>
-          <div class="btn-group">
-            <div class="btn" id="demo-1">Live Demo</div>
-            <div class="btn" id="repo-1">GitHub</div>
-          </div>
-        </div>
+        <div class="project-hologrid" id="projectHologrid"></div>
+      </section>
 
-        <!-- Production Project -->
-        <div class="project-card production-card">
-          <div class="production-badge">🚀 LIVE IN PRODUCTION</div>
-          <img
-            src="imgs/quilombo.jpg"
-            alt="Quilombo Sertão do Moxotó"
-            onerror="
-              this.src =
-                'https://placehold.co/400x200/10b981/white?text=Quilombo'
-            "
-          />
-          <h3>Quilombo Sertão do Moxotó</h3>
-          <p>
-            CNPq institutional website for Quilombola communities research,
-            culture and territorial rights.
-          </p>
-          <div class="btn-group">
-            <div class="btn" id="visit-production">Visit Site</div>
-          </div>
+      <section id="production" class="cyber-section">
+        <div class="section-header">
+          <span class="section-badge">// $ curl -s production.cnpq</span>
+          <h2>LIVE_DEPLOYMENT</h2>
         </div>
-      </div>
-    </section>
+        <div class="production-node" id="productionNode"></div>
+      </section>
 
-    <section id="contact" class="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="input-box">
-        <div class="card-contact">
-          <i class="fa-solid fa-envelope"></i>
-          <h4>Email</h4>
-          <p>davissonbeat@gmail.com</p>
+      <section id="contact" class="cyber-section">
+        <div class="section-header">
+          <span class="section-badge">// $ ping -c 4 contact</span>
+          <h2>OPEN_CHANNELS</h2>
         </div>
-        <div class="card-contact">
-          <i class="fa-brands fa-whatsapp"></i>
-          <h4>Phone</h4>
-          <p>+55 81 9653-3458</p>
-        </div>
-      </div>
-    </section>
+        <div class="contact-grid" id="contactGrid"></div>
+      </section>
 
-    <footer>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <p class="copyright">© All Rights Reserved | Dávisson Falcão</p>
-    </footer>
+      <footer class="cyber-footer-main">
+        <p>
+          (c) 2025 DAVISSON FALCAO //
+          <span id="footerCopy">ROOT_ACCESS_GRANTED</span>
+        </p>
+      </footer>
+    </main>
 
     <script src="script.js"></script>
   </body>
