@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR" data-title-pt="Imoboo CRM — Dávisson Falcão" data-title-en="Imoboo CRM — Dávisson Falcão">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imoboo CRM — Dávisson Falcão</title>
+    <meta name="description" content="CRM imobiliário com atendimento por WhatsApp assistido por IA. .NET 8, Angular 18, Redis, SQL Server e Claude API." />
+    <meta name="theme-color" content="#efebe3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Imoboo CRM — Dávisson Falcão" />
+    <meta property="og:image" content="../assets/img/og.jpg" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, th = null, lg = null;
+        try { th = localStorage.getItem("theme"); lg = localStorage.getItem("lang"); } catch (e) {}
+        if (th) d.dataset.theme = th;
+        d.lang = lg || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt-BR" : "en");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("anim");
+          setTimeout(function () { if (!window.gsap) d.classList.remove("anim"); }, 3000);
+        }
+        try {
+          if (sessionStorage.getItem("entering")) {
+            sessionStorage.removeItem("entering");
+            d.classList.add("is-entering");
+            setTimeout(function () { d.classList.remove("is-entering"); }, 2500);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="curtain" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"><span></span></div>
+
+    <header class="head">
+      <div class="wrap">
+        <a class="brand" href="../index.html" data-curtain="Dávisson">Dávisson <em>F.</em> <small>Full-stack</small></a>
+        <nav class="nav" aria-label="Seções">
+          <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+          <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+          <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+          <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+        </nav>
+        <div class="tools">
+          <button class="tool" data-lang-toggle aria-label="Mudar idioma / Switch language"><span lang="pt-BR">EN</span><span lang="en">PT</span></button>
+          <button class="tool" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" /></svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          </button>
+          <button class="tool menu-btn" aria-expanded="false" aria-controls="drawer">
+            <span lang="pt-BR" data-menu-label data-open="Menu" data-close="Fechar">Menu</span><span lang="en" data-menu-label data-open="Menu" data-close="Close">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <nav aria-label="Menu">
+        <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+        <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+        <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+        <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+      </nav>
+      <p class="mono">davissonfalcaosjr@gmail.com</p>
+    </div>
+
+    <main id="conteudo">
+      <section class="case-hero">
+        <div class="wrap">
+          <div class="crumbs mono" data-reveal>
+            <a href="../index.html#trabalhos" data-curtain="Dávisson">← <span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+            <span>03 / 04</span>
+          </div>
+          <h1 class="display case-title" data-lines>
+            <span class="line"><span>Imoboo</span></span>
+            <span class="line"><span><em>CRM</em></span></span>
+          </h1>
+          <div class="case-intro">
+            <p class="lede" data-reveal>
+              <span lang="pt-BR">O corretor vende sem passar o dia preso ao WhatsApp. A IA responde as perguntas repetitivas sobre o catálogo; o corretor entra quando o atendimento exige gente.</span>
+              <span lang="en">Real-estate agents sell without spending the day stuck on WhatsApp. The AI answers the repetitive questions about listings; the agent steps in when the conversation needs a person.</span>
+            </p>
+            <dl class="meta" data-reveal>
+              <div><dt class="mono"><span lang="pt-BR">Papel</span><span lang="en">Role</span></dt><dd><span lang="pt-BR">Arquitetura, backend e frontend, sozinho</span><span lang="en">Architecture, backend and frontend, solo</span></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Quando</span><span lang="en">When</span></dt><dd>2026</dd></div>
+              <div><dt class="mono">Backend</dt><dd>.NET 8 · EF Core · SQL Server · Redis · <span lang="pt-BR">camadas Domain → Application → Infrastructure → Api</span><span lang="en">Domain → Application → Infrastructure → Api layers</span></dd></div>
+              <div><dt class="mono">Frontend</dt><dd>Angular 18 · TypeScript</dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Integrações</span><span lang="en">Integrations</span></dt><dd>Evolution API (WhatsApp) · Claude API · Docker Compose</dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Código</span><span lang="en">Code</span></dt><dd><a class="link-u" href="https://github.com/DavissonJr/Imoboo" target="_blank" rel="noopener">github.com/DavissonJr/Imoboo ↗</a></dd></div>
+            </dl>
+          </div>
+          <figure class="cover" data-reveal>
+            <img src="../assets/img/capa-imoboo.svg" alt="Ilustração: conversa de WhatsApp em que a IA responde com imóveis do catálogo e depois transfere para o corretor" data-parallax />
+          </figure>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="case-sec">
+          <header>
+            <span class="mono">01</span>
+            <h2><span lang="pt-BR">A regra</span><span lang="en">The rule</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p class="big" lang="pt-BR">A IA não é fonte de verdade.</p>
+            <p class="big" lang="en">The AI is not a source of truth.</p>
+            <p lang="pt-BR">Preço, endereço, área, quartos e disponibilidade entram no prompt vindos do banco, dentro de um bloco <code>&lt;catalogo&gt;</code>. O system prompt proíbe estimar e manda encaminhar ao corretor quando o dado não existe. Se o catálogo volta vazio, a IA diz que vai confirmar — <strong>nunca inventa um imóvel</strong>.</p>
+            <p lang="en">Price, address, area, bedrooms and availability reach the prompt from the database, inside a <code>&lt;catalogo&gt;</code> block. The system prompt forbids guessing and hands off to the agent when data is missing. If the catalogue comes back empty, the AI says it will check — <strong>it never makes up a listing</strong>.</p>
+            <p lang="pt-BR">E só usa IA quem precisa. “Imóveis abaixo de 300 mil com 2 quartos” é <code>WHERE</code>, não prompt. O modelo entra depois, para transformar a lista em conversa.</p>
+            <p lang="en">And only what needs AI uses AI. “Listings under 300k with 2 bedrooms” is a <code>WHERE</code> clause, not a prompt. The model comes in afterwards, to turn the list into conversation.</p>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">02</span>
+            <h2><span lang="pt-BR">O caminho de uma mensagem</span><span lang="en">The path of a message</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">O webhook responde 200 em menos de 50 ms e joga o trabalho para um worker fora do ciclo HTTP. <strong>Cada passo antes da IA existe para não chamar a IA.</strong> Escolha uma mensagem e veja até onde ela vai:</p>
+            <p lang="en">The webhook returns 200 in under 50 ms and hands the work to a worker outside the HTTP cycle. <strong>Every step before the AI exists to avoid calling the AI.</strong> Pick a message and see how far it goes:</p>
+          </div>
+        </section>
+        <div class="widget" data-widget="pipe" data-reveal>
+          <div class="widget-head mono">
+            <span><span lang="pt-BR">Interativo · InboundMessageWorker</span><span lang="en">Interactive · InboundMessageWorker</span></span>
+            <span><span lang="pt-BR">laranja = chamada de modelo</span><span lang="en">orange = model call</span></span>
+          </div>
+          <div class="widget-body">
+            <div class="chips"></div>
+            <ol class="pipe"></ol>
+            <div class="pipe-out" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">03</span>
+            <h2><span lang="pt-BR">Onde o custo é contido</span><span lang="en">Where cost is contained</span></h2>
+          </header>
+          <ol class="decisions" data-reveal>
+            <li><div>
+              <h3><span lang="pt-BR">Busca em SQL antes do prompt</span><span lang="en">SQL search before the prompt</span></h3>
+              <p lang="pt-BR">Só os imóveis relevantes viajam no contexto — no máximo cinco.</p>
+              <p lang="en">Only relevant listings travel in the context — five at most.</p>
+            </div></li>
+            <li><div>
+              <h3><span lang="pt-BR">Dois tiers de modelo</span><span lang="en">Two model tiers</span></h3>
+              <p lang="pt-BR">Extração e classificação vão num modelo rápido e barato; só a resposta final usa o modelo balanceado.</p>
+              <p lang="en">Extraction and classification go to a fast, cheap model; only the final reply uses the balanced one.</p>
+            </div></li>
+            <li><div>
+              <h3><span lang="pt-BR">Cache em camadas</span><span lang="en">Layered caching</span></h3>
+              <p lang="pt-BR">Extração com cache de 7 dias (“2 quartos até 300 mil” é extraído uma vez por tenant), catálogo de 5 minutos, resposta de 6 horas. Mesma pergunta com o mesmo catálogo dá a mesma resposta.</p>
+              <p lang="en">7-day cache on extraction (“2 beds under 300k” is extracted once per tenant), 5 minutes on the catalogue, 6 hours on replies. Same question with the same catalogue gets the same answer.</p>
+            </div></li>
+            <li><div>
+              <h3><span lang="pt-BR">Histórico curto</span><span lang="en">Short history</span></h3>
+              <p lang="pt-BR">Janela de 8 mensagens mais um resumo: conversa longa não é reenviada a cada turno.</p>
+              <p lang="en">An 8-message window plus a summary: long conversations aren't resent on every turn.</p>
+            </div></li>
+            <li><div>
+              <h3><span lang="pt-BR">Teto por tenant e retry limitado</span><span lang="en">Per-tenant cap and bounded retry</span></h3>
+              <p lang="pt-BR"><code>MonthlyAiMessageLimit</code> corta antes da fatura, e falha de IA tenta de novo uma vez só. <code>AiUsageLogs</code> guarda operação, modelo, tokens e se veio do cache — sem prompt e sem conteúdo do lead.</p>
+              <p lang="en"><code>MonthlyAiMessageLimit</code> stops usage before the bill does, and a failed AI call retries only once. <code>AiUsageLogs</code> records operation, model, tokens and cache hits — no prompts, no lead content.</p>
+            </div></li>
+          </ol>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">04</span>
+            <h2><span lang="pt-BR">Multi-tenant e segurança</span><span lang="en">Multi-tenancy and security</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR"><strong>Isolamento é do backend.</strong> Global query filters no <code>DbContext</code> aplicam o <code>WHERE TenantId</code> sozinhos e o <code>SaveChanges</code> bloqueia gravação cruzada. O <code>TenantId</code> vem da claim do JWT — nunca de body, query ou header. No Redis, toda chave começa com <code>tenant:{id}:</code>.</p>
+            <p lang="en"><strong>Isolation belongs to the backend.</strong> Global query filters on the <code>DbContext</code> apply <code>WHERE TenantId</code> automatically and <code>SaveChanges</code> blocks cross-tenant writes. <code>TenantId</code> comes from the JWT claim — never from body, query or header. In Redis, every key starts with <code>tenant:{id}:</code>.</p>
+            <p lang="pt-BR"><strong>Webhook idempotente.</strong> Índice único em <code>(Provider, ExternalEventId)</code> e outro em <code>(TenantId, ExternalMessageId)</code>: mensagem reentregue é descartada no insert.</p>
+            <p lang="en"><strong>Idempotent webhook.</strong> A unique index on <code>(Provider, ExternalEventId)</code> and another on <code>(TenantId, ExternalMessageId)</code>: redelivered messages are dropped at insert time.</p>
+            <p lang="pt-BR"><strong>O resto do básico bem feito:</strong> senha em PBKDF2-HMAC-SHA256 com 210 mil iterações e comparação em tempo constante, segredos só por variável de ambiente, telefone mascarado nos logs, container da API rodando sem root.</p>
+            <p lang="en"><strong>The rest of the basics, done properly:</strong> PBKDF2-HMAC-SHA256 passwords with 210k iterations and constant-time comparison, secrets only via environment variables, phone numbers masked in logs, API container running as non-root.</p>
+            <p lang="pt-BR"><strong>A automação é reversível.</strong> Assumir a conversa, devolver para a IA e encerrar são ações explícitas na interface; responder manualmente já assume.</p>
+            <p lang="en"><strong>Automation is reversible.</strong> Taking over, handing back to the AI and closing are explicit actions in the UI; replying manually takes over automatically.</p>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">05</span>
+            <h2><span lang="pt-BR">O que ainda falta</span><span lang="en">What's still missing</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">Escrevo isso para deixar claro o limite do que está entregue:</p>
+            <p lang="en">Written down to be clear about where the delivered work ends:</p>
+            <ul class="todo-list">
+              <li><span lang="pt-BR">Testes automatizados</span><span lang="en">Automated tests</span></li>
+              <li><span lang="pt-BR">Caixa de entrada em tempo real — hoje ela consulta a API a cada 20 segundos</span><span lang="en">Real-time inbox — today it polls the API every 20 seconds</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="next" aria-label="Próximo projeto">
+          <a href="diario.html" data-curtain="Diário">
+            <span class="mono"><span><span lang="pt-BR">Próximo</span><span lang="en">Next</span> — 04 / 04</span><span class="arrow">→</span></span>
+            <span class="display"><em>Diário</em></span>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap mono">
+        <span>© <span data-year>2026</span> Dávisson Falcão</span>
+        <a class="link-u" href="mailto:davissonfalcaosjr@gmail.com">davissonfalcaosjr@gmail.com</a>
+        <a class="link-u" href="#conteudo"><span lang="pt-BR">Voltar ao topo</span><span lang="en">Back to top</span> ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

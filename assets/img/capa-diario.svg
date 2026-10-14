@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#dfe7d3"/>
+  <g transform="translate(520 500)">
+    <circle r="300" fill="none" stroke="#c7d3b9" stroke-width="64"/>
+    <!-- café, almoço, lanche, jantar -->
+    <circle r="300" fill="none" stroke="#e6a23c" stroke-width="64" stroke-dasharray="400 1485" transform="rotate(-90)"/>
+    <circle r="300" fill="none" stroke="#2f6b4f" stroke-width="64" stroke-dasharray="590 1295" stroke-dashoffset="-412" transform="rotate(-90)"/>
+    <circle r="300" fill="none" stroke="#d9694a" stroke-width="64" stroke-dasharray="230 1655" stroke-dashoffset="-1014" transform="rotate(-90)"/>
+    <circle r="300" fill="none" stroke="#5b7fa6" stroke-width="64" stroke-dasharray="225 1660" stroke-dashoffset="-1256" transform="rotate(-90)"/>
+    <text text-anchor="middle" y="10" font-family="Georgia, serif" font-size="128" fill="#1f2a22">1.420</text>
+    <text text-anchor="middle" y="70" font-family="monospace" font-size="24" fill="#566354">de 1.800 kcal</text>
+  </g>
+  <g transform="translate(1020 210)" font-family="Helvetica, Arial, sans-serif">
+    <rect width="420" height="580" rx="28" fill="#f7f6f0"/>
+    <text x="34" y="66" font-family="Georgia, serif" font-size="34" fill="#1f2a22">Almoço</text>
+    <text x="34" y="96" font-size="17" fill="#7a8676">534 kcal · 3 itens</text>
+    <g font-size="20" fill="#1f2a22">
+      <rect x="34" y="128" width="352" height="1" fill="#e2e4dc"/>
+      <text x="34" y="170">Frango grelhado</text><text x="386" y="170" text-anchor="end" fill="#2f6b4f">270</text>
+      <text x="34" y="196" font-size="15" fill="#7a8676">170 g</text>
+      <rect x="34" y="220" width="352" height="1" fill="#e2e4dc"/>
+      <text x="34" y="262">Arroz branco</text><text x="386" y="262" text-anchor="end" fill="#2f6b4f">192</text>
+      <text x="34" y="288" font-size="15" fill="#7a8676">150 g</text>
+      <rect x="34" y="312" width="352" height="1" fill="#e2e4dc"/>
+      <text x="34" y="354">Ovo cozido</text><text x="386" y="354" text-anchor="end" fill="#2f6b4f">72</text>
+      <text x="34" y="380" font-size="15" fill="#7a8676">1 unidade · 50 g</text>
+    </g>
+    <g transform="translate(34 430)">
+      <rect width="352" height="110" rx="16" fill="#e8efe0"/>
+      <text x="24" y="44" font-size="16" fill="#566354">Água</text>
+      <g fill="#5b7fa6"><rect x="24" y="60" width="28" height="30" rx="4"/><rect x="62" y="60" width="28" height="30" rx="4"/><rect x="100" y="60" width="28" height="30" rx="4"/><rect x="138" y="60" width="28" height="30" rx="4"/><rect x="176" y="60" width="28" height="30" rx="4"/></g>
+      <g fill="none" stroke="#a9b8c9" stroke-width="2"><rect x="214" y="60" width="28" height="30" rx="4"/><rect x="252" y="60" width="28" height="30" rx="4"/><rect x="290" y="60" width="28" height="30" rx="4"/></g>
+    </g>
+  </g>
+</svg>

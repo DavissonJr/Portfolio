@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#1d2626"/>
+  <circle cx="1240" cy="520" r="360" fill="#243131"/>
+  <circle cx="1240" cy="520" r="250" fill="none" stroke="#33463f" stroke-width="2" stroke-dasharray="4 10"/>
+  <!-- casa -->
+  <g transform="translate(1090 360)" fill="none" stroke="#e9c8a0" stroke-width="6" stroke-linejoin="round">
+    <path d="M20 150L150 40 280 150"/>
+    <path d="M50 125V290H250V125"/>
+    <rect x="120" y="200" width="60" height="90"/>
+    <rect x="75" y="160" width="36" height="36"/><rect x="190" y="160" width="36" height="36"/>
+    <path d="M220 85V40h28v68"/>
+  </g>
+  <!-- conversa -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="22">
+    <g transform="translate(160 170)">
+      <rect width="520" height="96" rx="20" fill="#f3efe6"/>
+      <text x="28" y="44" fill="#1d2626">Oi! Tem apartamento de 2 quartos</text>
+      <text x="28" y="74" fill="#1d2626">até 300 mil em Boa Viagem?</text>
+      <text x="456" y="86" font-size="13" fill="#8a8f8c">14:02</text>
+    </g>
+    <g transform="translate(300 300)">
+      <rect width="560" height="200" rx="20" fill="#e0552f"/>
+      <text x="28" y="44" fill="#fff6ef">Tenho 2 opções no catálogo agora:</text>
+      <text x="28" y="86" fill="#fff6ef">• Ed. Atlântico — 2 qts, 68 m², R$ 289 mil</text>
+      <text x="28" y="122" fill="#fff6ef">• Res. Coqueiral — 2 qts, 61 m², R$ 274 mil</text>
+      <text x="28" y="164" fill="#fff6ef">Quer agendar uma visita?</text>
+      <text x="460" y="188" font-size="13" fill="#ffd7c6">14:02 · IA</text>
+    </g>
+    <g transform="translate(160 540)">
+      <rect width="430" height="66" rx="20" fill="#f3efe6"/>
+      <text x="28" y="42" fill="#1d2626">Quero falar com o corretor</text>
+    </g>
+    <g transform="translate(300 640)">
+      <rect width="500" height="66" rx="20" fill="none" stroke="#e9c8a0" stroke-width="2" stroke-dasharray="6 6"/>
+      <text x="28" y="42" fill="#e9c8a0">→ conversa transferida para Rafael</text>
+    </g>
+  </g>
+  <g font-family="monospace" font-size="15" fill="#7d8d87">
+    <text x="160" y="820">webhook → fila → lock(redis) → catálogo(sql) → modelo</text>
+    <text x="160" y="848">200 OK em &lt; 50 ms</text>
+  </g>
+</svg>

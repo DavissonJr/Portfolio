@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR" data-title-pt="Plataforma Pública — Dávisson Falcão" data-title-en="Plataforma Pública — Dávisson Falcão">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma Pública — Dávisson Falcão</title>
+    <meta name="description" content="Front-end web e mobile de uma plataforma multi-órgão para Diário Oficial, transparência, e-SIC e plenário. Next.js 16, Expo e Tailwind 4." />
+    <meta name="theme-color" content="#efebe3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Plataforma Pública — Dávisson Falcão" />
+    <meta property="og:image" content="../assets/img/og.jpg" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, th = null, lg = null;
+        try { th = localStorage.getItem("theme"); lg = localStorage.getItem("lang"); } catch (e) {}
+        if (th) d.dataset.theme = th;
+        d.lang = lg || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt-BR" : "en");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("anim");
+          setTimeout(function () { if (!window.gsap) d.classList.remove("anim"); }, 3000);
+        }
+        try {
+          if (sessionStorage.getItem("entering")) {
+            sessionStorage.removeItem("entering");
+            d.classList.add("is-entering");
+            setTimeout(function () { d.classList.remove("is-entering"); }, 2500);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="curtain" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"><span></span></div>
+
+    <header class="head">
+      <div class="wrap">
+        <a class="brand" href="../index.html" data-curtain="Dávisson">Dávisson <em>F.</em> <small>Full-stack</small></a>
+        <nav class="nav" aria-label="Seções">
+          <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+          <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+          <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+          <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+        </nav>
+        <div class="tools">
+          <button class="tool" data-lang-toggle aria-label="Mudar idioma / Switch language"><span lang="pt-BR">EN</span><span lang="en">PT</span></button>
+          <button class="tool" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" /></svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          </button>
+          <button class="tool menu-btn" aria-expanded="false" aria-controls="drawer">
+            <span lang="pt-BR" data-menu-label data-open="Menu" data-close="Fechar">Menu</span><span lang="en" data-menu-label data-open="Menu" data-close="Close">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <nav aria-label="Menu">
+        <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+        <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+        <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+        <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+      </nav>
+      <p class="mono">davissonfalcaosjr@gmail.com</p>
+    </div>
+
+    <main id="conteudo">
+      <section class="case-hero">
+        <div class="wrap">
+          <div class="crumbs mono" data-reveal>
+            <a href="../index.html#trabalhos" data-curtain="Dávisson">← <span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+            <span>01 / 04</span>
+          </div>
+          <h1 class="display case-title" data-lines>
+            <span class="line"><span>Plataforma</span></span>
+            <span class="line"><span><em>Pública</em></span></span>
+          </h1>
+          <div class="case-intro">
+            <p class="lede" data-reveal>
+              <span lang="pt-BR">Uma plataforma para prefeituras, Câmaras e autarquias publicarem o Diário Oficial, prestarem contas ao cidadão e conduzirem sessões com votação ao vivo. Eu fiz o front: web e mobile.</span>
+              <span lang="en">A platform for city halls, councils and public agencies to publish their official gazette, be accountable to citizens and run sessions with live voting. I built the front end: web and mobile.</span>
+            </p>
+            <dl class="meta" data-reveal>
+              <div><dt class="mono"><span lang="pt-BR">Papel</span><span lang="en">Role</span></dt><dd><span lang="pt-BR">Front-end web e mobile</span><span lang="en">Web and mobile front end</span></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Quando</span><span lang="en">When</span></dt><dd>2026 — <span lang="pt-BR">em andamento</span><span lang="en">ongoing</span></dd></div>
+              <div><dt class="mono">Stack</dt><dd>Next.js 16 · React 19 · Tailwind 4 · Expo SDK 57 · Keycloak · SignalR</dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Time</span><span lang="en">Team</span></dt><dd><span lang="pt-BR">Dois devs — backend em .NET 10 por Conrado Capistrano</span><span lang="en">Two devs — .NET 10 backend by Conrado Capistrano</span></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Código</span><span lang="en">Code</span></dt><dd><span lang="pt-BR">Repositório privado</span><span lang="en">Private repository</span></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Commits</span><span lang="en">Commits</span></dt><dd><span lang="pt-BR">133 de 167</span><span lang="en">133 of 167</span></dd></div>
+            </dl>
+          </div>
+          <figure class="cover" data-reveal>
+            <img src="../assets/img/capa-licitacao.svg" alt="Ilustração: página do Diário Oficial, painel de votação nominal e app do cidadão" data-parallax />
+          </figure>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="case-sec">
+          <header>
+            <span class="mono">01</span>
+            <h2><span lang="pt-BR">O problema</span><span lang="en">The problem</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p class="big" lang="pt-BR">Um órgão público pequeno costuma ter um sistema para cada obrigação legal. Aqui, tudo vive num lugar só — para dezenas de órgãos ao mesmo tempo.</p>
+            <p class="big" lang="en">A small public body usually has one system per legal obligation. Here, everything lives in one place — for dozens of bodies at once.</p>
+            <p lang="pt-BR">São duas frentes. <strong>Publicidade legal</strong>: Diário Oficial, atos, portal da transparência, e-SIC e ouvidoria, site do órgão e envio ao PNCP. <strong>Legislativo</strong>: proposições, comissões, sessões, votação e o telão do plenário.</p>
+            <p lang="en">There are two fronts. <strong>Legal publicity</strong>: official gazette, acts, transparency portal, FOI requests and ombudsman, the body's website and submissions to PNCP (the national procurement portal). <strong>Legislative</strong>: bills, committees, sessions, voting and the chamber's big screen.</p>
+            <p lang="pt-BR">Cada órgão chega pelo próprio domínio, com brasão, nome, módulos e cores próprios — e tudo precisa passar no padrão de acessibilidade do governo (eMAG).</p>
+            <p lang="en">Each body arrives through its own domain, with its own coat of arms, name, modules and colours — and everything has to meet the government accessibility standard (eMAG).</p>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">02</span>
+            <h2><span lang="pt-BR">O que eu fiz</span><span lang="en">What I built</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">Quatro superfícies web num só app Next.js e um app em Expo. O backend é do Conrado; o contrato entre os dois fica versionado em <code>docs/</code>.</p>
+            <p lang="en">Four web surfaces in a single Next.js app plus an Expo app. The backend is Conrado's; the contract between them is versioned in <code>docs/</code>.</p>
+            <div class="arch-map">
+              <div class="mine half">
+                <b><span lang="pt-BR">Portal público</span><span lang="en">Public portal</span></b>
+                <small lang="pt-BR">Diário Oficial com calendário de edições, busca, recorte em PDF e RSS · transparência com catálogo DCAT · e-SIC com prazos da LAI · legislação com LexML · perfil público do vereador com votos nominais</small>
+                <small lang="en">Official gazette with edition calendar, search, PDF clipping and RSS · transparency with a DCAT catalogue · FOI requests with legal deadlines · legislation with LexML · councillor profiles with roll-call votes</small>
+              </div>
+              <div class="mine half">
+                <b><span lang="pt-BR">Painel do órgão</span><span lang="en">Admin panel</span></b>
+                <small lang="pt-BR">Editor com tabela, ditado por voz e salvamento automático · tramitação com fluxos e ação em lote · GED com temporalidade pelo rito do Conarq · assinatura e signatário externo · relatórios</small>
+                <small lang="en">Editor with tables, voice dictation and autosave · document workflows with bulk actions · records management following national archive rules · signatures and external signers · reports</small>
+              </div>
+              <div class="mine half">
+                <b><span lang="pt-BR">Plenário e telão</span><span lang="en">Plenary and big screen</span></b>
+                <small lang="pt-BR">Condução da sessão (roteiro, chamada, microfones, sorteio, Presidência) · votação nominal ao vivo · tablet do vereador com pedido de palavra e urgência</small>
+                <small lang="en">Session control (script, roll call, microphones, draws, chair) · live roll-call voting · councillor tablet with requests to speak and urgency</small>
+              </div>
+              <div class="mine half">
+                <b><span lang="pt-BR">Console da plataforma</span><span lang="en">Platform console</span></b>
+                <small lang="pt-BR">Provisionamento e homologação de órgãos, importação do legado, contratos, chamados, incidentes, backups e notas de versão</small>
+                <small lang="en">Onboarding and sign-off of new bodies, legacy imports, contracts, tickets, incidents, backups and release notes</small>
+              </div>
+              <div class="mine half">
+                <b><span lang="pt-BR">App do cidadão</span><span lang="en">Citizen app</span></b>
+                <small lang="pt-BR">Expo + Expo Router: Diário, sessão ao vivo, serviços, protocolos e notificações push por órgão seguido</small>
+                <small lang="en">Expo + Expo Router: gazette, live session, services, request tracking and push notifications per followed body</small>
+              </div>
+              <div class="half">
+                <b>Backend</b>
+                <small lang="pt-BR">.NET 10 · PostgreSQL com réplica · PgBouncer · RabbitMQ · Valkey · S3 com Object Lock · Keycloak</small>
+                <small lang="en">.NET 10 · PostgreSQL with replica · PgBouncer · RabbitMQ · Valkey · S3 with Object Lock · Keycloak</small>
+              </div>
+            </div>
+            <div class="legend mono"><span><i class="mine"></i><span lang="pt-BR">feito por mim</span><span lang="en">built by me</span></span><span><i></i><span lang="pt-BR">time de backend</span><span lang="en">backend team</span></span></div>
+            <div class="mini-figs" style="margin-top: 40px">
+              <div><b data-count="130">130</b><span lang="pt-BR">páginas no app web</span><span lang="en">pages in the web app</span></div>
+              <div><b data-count="133">133</b><span lang="pt-BR">commits meus, de 167</span><span lang="en">of 167 commits are mine</span></div>
+              <div><b>4 + 1</b><span lang="pt-BR">superfícies web + app</span><span lang="en">web surfaces + app</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">03</span>
+            <h2><span lang="pt-BR">Um órgão, uma cor</span><span lang="en">One body, one colour</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">O <code>proxy.ts</code> do Next descobre o órgão pelo domínio e reescreve a rota para <code>app/[orgao]/…</code>. O layout aplica as cores do órgão como variáveis CSS e o Tailwind usa essas variáveis (<code>bg-primaria</code>, <code>text-primaria-texto</code>).</p>
+            <p lang="en">Next's <code>proxy.ts</code> resolves the body from the domain and rewrites the route to <code>app/[orgao]/…</code>. The layout applies the body's colours as CSS variables and Tailwind reads them (<code>bg-primaria</code>, <code>text-primaria-texto</code>).</p>
+            <p lang="pt-BR"><strong>Só a marca muda.</strong> Superfícies, texto e cores de situação (sucesso, aviso, perigo) são fixas, e a cor primária precisa de contraste de pelo menos 4,5:1 com o texto em cima dela. Troque o órgão abaixo:</p>
+            <p lang="en"><strong>Only the brand changes.</strong> Surfaces, text and status colours (success, warning, danger) are fixed, and the primary colour needs at least 4.5:1 contrast with the text on top. Switch the body below:</p>
+          </div>
+        </section>
+        <div class="widget" data-widget="orgao" data-reveal>
+          <div class="widget-head mono">
+            <span><span lang="pt-BR">Interativo · órgãos fictícios</span><span lang="en">Interactive · fictional bodies</span></span>
+            <span>layout.tsx → CSS vars</span>
+          </div>
+          <div class="widget-body">
+            <div class="chips"></div>
+            <div class="orgao-demo">
+              <div class="od-faixa"></div>
+              <div class="od-top">
+                <span class="od-brasao">C</span>
+                <span><b class="od-nome">Câmara Municipal de Exemplo</b><small><span lang="pt-BR">Portal da Transparência</span><span lang="en">Transparency Portal</span></small></span>
+              </div>
+              <div class="od-nav"><span>Diário Oficial</span><span>Legislação</span><span>Sessões</span><span>e-SIC</span><span>Transparência</span><span>Ouvidoria</span></div>
+              <div class="od-body">
+                <div class="od-card">
+                  <span class="od-tag">Edição nº 1.284</span>
+                  <h5>Diário Oficial de hoje</h5>
+                  <p>Decreto nº 112/2026 · Portaria nº 48/2026 · Extrato de contrato nº 19/2026</p>
+                  <span class="od-btn">Ler edição</span>
+                </div>
+                <div class="od-status">
+                  <span class="od-ok">Pedido e-SIC respondido <b>✓</b></span>
+                  <span class="od-warn">Prazo vence em 3 dias <b>!</b></span>
+                  <span class="od-bad">Prazo vencido <b>×</b></span>
+                </div>
+              </div>
+            </div>
+            <div class="contrast mono"></div>
+          </div>
+        </div>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">04</span>
+            <h2><span lang="pt-BR">Decisões</span><span lang="en">Decisions</span></h2>
+          </header>
+          <ol class="decisions" data-reveal>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">O navegador só fala com o Next</span><span lang="en">The browser only talks to Next</span></h3>
+                <p lang="pt-BR">Login no Keycloak com Authorization Code + PKCE. Os tokens ficam em cookies <code>httpOnly</code> e o proxy renova o access token. Upload e download passam por um BFF; o JavaScript da página nunca vê o token.</p>
+                <p lang="en">Keycloak login with Authorization Code + PKCE. Tokens live in <code>httpOnly</code> cookies and the proxy refreshes the access token. Uploads and downloads go through a BFF; page JavaScript never sees the token.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">O órgão é o domínio</span><span lang="en">The body is the domain</span></h3>
+                <p lang="pt-BR">O proxy envia o host num cabeçalho interno e o front chama <code>GET /api/v1/orgao</code> com <code>X-Dominio</code>. Domínio sem órgão é 404. <code>robots.txt</code> e <code>sitemap.xml</code> também saem por órgão.</p>
+                <p lang="en">The proxy forwards the host in an internal header and the front end calls <code>GET /api/v1/orgao</code> with <code>X-Dominio</code>. A domain with no body is a 404. <code>robots.txt</code> and <code>sitemap.xml</code> are generated per body too.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Cabeçalhos de segurança no proxy</span><span lang="en">Security headers in the proxy</span></h3>
+                <p lang="pt-BR">CSP, HSTS e Permissions-Policy aplicados em toda resposta, num lugar só, em vez de espalhados pelas páginas.</p>
+                <p lang="en">CSP, HSTS and Permissions-Policy applied to every response from one place instead of scattered across pages.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Tempo real onde importa</span><span lang="en">Real time where it matters</span></h3>
+                <p lang="pt-BR">O sino de notificações e o plenário ao vivo usam hubs SignalR direto do navegador, com um token de curta duração entregue pelo Next.</p>
+                <p lang="en">The notification bell and the live plenary use SignalR hubs straight from the browser, with a short-lived token handed out by Next.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Contrato antes de tela</span><span lang="en">Contract before screen</span></h3>
+                <p lang="pt-BR">O back cria rotas rápido. Numa revisão em outubro de 2026 cruzei as rotas do backend com o front e encontrei cerca de 240 endpoints ainda sem tela — o que virou backlog, em vez de suposição.</p>
+                <p lang="en">The backend ships routes fast. In an October 2026 review I cross-checked backend routes against the front end and found about 240 endpoints with no screen yet — which became a backlog instead of a guess.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">05</span>
+            <h2><span lang="pt-BR">Ritmo</span><span lang="en">Pace</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">Alguns commits recentes, como estão no histórico. Um assunto por commit, em conventional commits.</p>
+            <p lang="en">Some recent commits as they appear in the history (in Portuguese). One topic per commit, conventional-commit style.</p>
+            <div class="ticker" aria-label="Commits recentes">
+              <ul>
+                <li><span>feat(web)</span><span>copiar grupos e permissões de outro usuário</span></li>
+                <li><span>feat(web)</span><span>compartilhar notícia no WhatsApp, Facebook e X</span></li>
+                <li><span>feat(web)</span><span>prévia da notícia e da página no layout do portal antes de publicar</span></li>
+                <li><span>feat(web)</span><span>salvamento automático nos textos de documento, proposição, ato, matéria, notícia e página</span></li>
+                <li><span>feat(web)</span><span>editor de texto com formatação, tabela, ditado por voz e salvamento automático</span></li>
+                <li><span>feat(web)</span><span>página do evento, agenda em iCal e audiências públicas no portal</span></li>
+                <li><span>feat(web)</span><span>validar documento enviando o PDF e baixar o original</span></li>
+                <li><span>feat(mobile)</span><span>situação de todos os protocolos guardados numa consulta só</span></li>
+                <li><span>feat(web)</span><span>detalhe do envio ao PNCP com requisição e resposta</span></li>
+                <li><span>feat(web)</span><span>calendário de edições, filtros da busca, recorte em PDF e RSS do Diário no portal</span></li>
+                <li><span>feat(web)</span><span>bloquear e liberar o voto de um vereador na Presidência</span></li>
+                <li><span>feat(web)</span><span>pedidos de palavra e urgência no tablet do vereador</span></li>
+                <li><span>feat(web)</span><span>temporalidade, caixas, arquivamento e eliminação pelo rito do Conarq no GED</span></li>
+                <li><span>feat(web)</span><span>cabeçalhos de segurança (CSP, HSTS, Permissions-Policy) aplicados no proxy</span></li>
+                <li><span>feat(web)</span><span>painel do encarregado de dados (pedidos, incidentes, inventário e RIPD)</span></li>
+                <li><span>feat(web)</span><span>importação dos eleitos pelo CSV do TSE</span></li>
+                <!-- repetido para o loop -->
+                <li><span>feat(web)</span><span>copiar grupos e permissões de outro usuário</span></li>
+                <li><span>feat(web)</span><span>compartilhar notícia no WhatsApp, Facebook e X</span></li>
+                <li><span>feat(web)</span><span>prévia da notícia e da página no layout do portal antes de publicar</span></li>
+                <li><span>feat(web)</span><span>salvamento automático nos textos de documento, proposição, ato, matéria, notícia e página</span></li>
+                <li><span>feat(web)</span><span>editor de texto com formatação, tabela, ditado por voz e salvamento automático</span></li>
+                <li><span>feat(web)</span><span>página do evento, agenda em iCal e audiências públicas no portal</span></li>
+                <li><span>feat(web)</span><span>validar documento enviando o PDF e baixar o original</span></li>
+                <li><span>feat(mobile)</span><span>situação de todos os protocolos guardados numa consulta só</span></li>
+                <li><span>feat(web)</span><span>detalhe do envio ao PNCP com requisição e resposta</span></li>
+                <li><span>feat(web)</span><span>calendário de edições, filtros da busca, recorte em PDF e RSS do Diário no portal</span></li>
+                <li><span>feat(web)</span><span>bloquear e liberar o voto de um vereador na Presidência</span></li>
+                <li><span>feat(web)</span><span>pedidos de palavra e urgência no tablet do vereador</span></li>
+                <li><span>feat(web)</span><span>temporalidade, caixas, arquivamento e eliminação pelo rito do Conarq no GED</span></li>
+                <li><span>feat(web)</span><span>cabeçalhos de segurança (CSP, HSTS, Permissions-Policy) aplicados no proxy</span></li>
+                <li><span>feat(web)</span><span>painel do encarregado de dados (pedidos, incidentes, inventário e RIPD)</span></li>
+                <li><span>feat(web)</span><span>importação dos eleitos pelo CSV do TSE</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <nav class="next" aria-label="Próximo projeto">
+          <a href="olheiro-de-preco.html" data-curtain="Olheiro de Preço">
+            <span class="mono"><span><span lang="pt-BR">Próximo</span><span lang="en">Next</span> — 02 / 04</span><span class="arrow">→</span></span>
+            <span class="display">Olheiro de <em>Preço</em></span>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap mono">
+        <span>© <span data-year>2026</span> Dávisson Falcão</span>
+        <a class="link-u" href="mailto:davissonfalcaosjr@gmail.com">davissonfalcaosjr@gmail.com</a>
+        <a class="link-u" href="#conteudo"><span lang="pt-BR">Voltar ao topo</span><span lang="en">Back to top</span> ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR" data-title-pt="Olheiro de Preço — Dávisson Falcão" data-title-en="Olheiro de Preço — Dávisson Falcão">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Olheiro de Preço — Dávisson Falcão</title>
+    <meta name="description" content="SaaS para vendedores do Mercado Livre: painel de vendas e aviso no Telegram quando um concorrente baixa o preço. Next.js, Supabase e Cloudflare Workers." />
+    <meta name="theme-color" content="#efebe3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Olheiro de Preço — Dávisson Falcão" />
+    <meta property="og:image" content="../assets/img/olheiro/landing.webp" />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, th = null, lg = null;
+        try { th = localStorage.getItem("theme"); lg = localStorage.getItem("lang"); } catch (e) {}
+        if (th) d.dataset.theme = th;
+        d.lang = lg || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt-BR" : "en");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("anim");
+          setTimeout(function () { if (!window.gsap) d.classList.remove("anim"); }, 3000);
+        }
+        try {
+          if (sessionStorage.getItem("entering")) {
+            sessionStorage.removeItem("entering");
+            d.classList.add("is-entering");
+            setTimeout(function () { d.classList.remove("is-entering"); }, 2500);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="curtain" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"><span></span></div>
+
+    <header class="head">
+      <div class="wrap">
+        <a class="brand" href="../index.html" data-curtain="Dávisson">Dávisson <em>F.</em> <small>Full-stack</small></a>
+        <nav class="nav" aria-label="Seções">
+          <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+          <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+          <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+          <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+        </nav>
+        <div class="tools">
+          <button class="tool" data-lang-toggle aria-label="Mudar idioma / Switch language"><span lang="pt-BR">EN</span><span lang="en">PT</span></button>
+          <button class="tool" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" /></svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          </button>
+          <button class="tool menu-btn" aria-expanded="false" aria-controls="drawer">
+            <span lang="pt-BR" data-menu-label data-open="Menu" data-close="Fechar">Menu</span><span lang="en" data-menu-label data-open="Menu" data-close="Close">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <nav aria-label="Menu">
+        <a href="../index.html#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+        <a href="../index.html#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+        <a href="../index.html#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+        <a href="../index.html#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+      </nav>
+      <p class="mono">davissonfalcaosjr@gmail.com</p>
+    </div>
+
+    <main id="conteudo">
+      <section class="case-hero">
+        <div class="wrap">
+          <div class="crumbs mono" data-reveal>
+            <a href="../index.html#trabalhos" data-curtain="Dávisson">← <span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+            <span>02 / 04</span>
+          </div>
+          <h1 class="display case-title" data-lines>
+            <span class="line"><span>Olheiro</span></span>
+            <span class="line"><span>de <em>Preço</em></span></span>
+          </h1>
+          <div class="case-intro">
+            <p class="lede" data-reveal>
+              <span lang="pt-BR">Quem vende no Mercado Livre perde venda quando um concorrente baixa o preço e ninguém percebe. O Olheiro confere os preços — de 6 em 6 horas no plano grátis a cada 30 minutos no mais caro — e avisa no Telegram. Produto meu, do zero: ideia, código, cobrança e deploy.</span>
+              <span lang="en">Mercado Livre sellers lose sales when a competitor drops their price and nobody notices. Olheiro checks prices — every 6 hours on the free plan, down to every 30 minutes on the top one — and pings you on Telegram. My own product, from scratch: idea, code, billing and deploy.</span>
+            </p>
+            <dl class="meta" data-reveal>
+              <div><dt class="mono"><span lang="pt-BR">Papel</span><span lang="en">Role</span></dt><dd><span lang="pt-BR">Produto e desenvolvimento, sozinho</span><span lang="en">Product and engineering, solo</span></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Quando</span><span lang="en">When</span></dt><dd>2026</dd></div>
+              <div><dt class="mono">Stack</dt><dd>Next.js 16 · React 19 · TypeScript · Supabase · Tailwind 4 · Framer Motion · Recharts</dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Infra e integrações</span><span lang="en">Infra and integrations</span></dt><dd>Cloudflare Workers (OpenNext) · Mercado Livre · Mercado Pago · Telegram · Resend</dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Código</span><span lang="en">Code</span></dt><dd><a class="link-u" href="https://github.com/DavissonJr/OlheiroDePreco" target="_blank" rel="noopener">github.com/DavissonJr/OlheiroDePreco ↗</a></dd></div>
+              <div><dt class="mono"><span lang="pt-BR">Telas</span><span lang="en">Screens</span></dt><dd><span lang="pt-BR">Capturadas do modo demonstração</span><span lang="en">Captured from the demo mode</span></dd></div>
+            </dl>
+          </div>
+          <figure class="cover framed" data-reveal>
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span>olheiro-de-preco / painel</span></div>
+              <img src="../assets/img/olheiro/painel.webp" alt="Painel do Olheiro de Preço: faturamento de 30 dias em gráfico, pedidos, ticket médio, taxas do Mercado Livre e mudanças de preço dos concorrentes" width="2000" height="1250" />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="case-sec">
+          <header>
+            <span class="mono">01</span>
+            <h2><span lang="pt-BR">O produto</span><span lang="en">The product</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p class="big" lang="pt-BR">Conecta a conta do Mercado Livre, mostra quanto você vendeu e quanto sobrou depois das taxas — e fica de olho em quem vende o mesmo produto.</p>
+            <p class="big" lang="en">Connect your Mercado Livre account, see what you sold and what's left after fees — and keep an eye on whoever sells the same product.</p>
+            <p lang="pt-BR">Por trás do painel: sincronização e webhook do Mercado Livre, conferência agendada de preços e estoque, <strong>ajuste automático de preço com limites de margem</strong>, avisos agrupados do dia e resumo semanal por e-mail, bot do Telegram, planos com assinatura e teste grátis no Mercado Pago, termos e privacidade (LGPD) e exclusão de conta.</p>
+            <p lang="en">Behind the dashboard: Mercado Livre sync and webhooks, scheduled price and stock checks, <strong>automatic repricing within margin limits</strong>, daily grouped alerts and a weekly email digest, a Telegram bot, subscription plans with a free trial on Mercado Pago, terms and privacy pages (LGPD) and account deletion.</p>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">02</span>
+            <h2><span lang="pt-BR">O aviso</span><span lang="en">The alert</span></h2>
+          </header>
+          <div class="prose" data-reveal>
+            <p lang="pt-BR">Arraste o preço do concorrente. Enquanto ele estiver acima do seu, o Olheiro fica quieto; quando passa por baixo, o aviso sai.</p>
+            <p lang="en">Drag the competitor's price. While it's above yours, Olheiro stays quiet; once it goes under, the alert fires.</p>
+          </div>
+        </section>
+        <div class="widget" data-widget="aviso" data-reveal>
+          <div class="widget-head mono">
+            <span><span lang="pt-BR">Interativo · dados da demonstração</span><span lang="en">Interactive · demo data</span></span>
+            <span>lib/verificador.ts</span>
+          </div>
+          <div class="widget-body sim">
+            <div>
+              <div class="sim-row"><span class="mono"><span lang="pt-BR">Seu anúncio</span><span lang="en">Your listing</span></span><b>R$ 189,90</b></div>
+              <div class="sim-row"><span class="mono">CASADOFONE</span><b data-concorrente>R$ 175,00</b></div>
+              <label class="sr-only" for="preco-concorrente"><span lang="pt-BR">Preço do concorrente</span><span lang="en">Competitor price</span></label>
+              <input id="preco-concorrente" type="range" min="1590" max="2190" step="10" value="1750" />
+              <p class="mono" data-diff>—</p>
+            </div>
+            <div class="tg" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <section class="gallery" aria-label="Telas do produto">
+          <div class="gallery-track">
+            <figure>
+              <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>olheiro-de-preco</span></div><img src="../assets/img/olheiro/landing.webp" alt="Página inicial: Saiba na hora quando um concorrente baixar o preço" loading="lazy" width="2000" height="1250" /></div>
+              <figcaption class="mono"><span><span lang="pt-BR">Página inicial</span><span lang="en">Landing page</span></span><span>01</span></figcaption>
+            </figure>
+            <figure>
+              <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>/painel/concorrentes</span></div><img src="../assets/img/olheiro/concorrentes.webp" alt="Concorrentes: cada anúncio seu com o concorrente, histórico de preço e diferença" loading="lazy" width="2000" height="1250" /></div>
+              <figcaption class="mono"><span><span lang="pt-BR">Concorrentes, com histórico de preço</span><span lang="en">Competitors, with price history</span></span><span>02</span></figcaption>
+            </figure>
+            <figure>
+              <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>/painel/produtos</span></div><img src="../assets/img/olheiro/produtos.webp" alt="Produtos sincronizados do Mercado Livre" loading="lazy" width="2000" height="1250" /></div>
+              <figcaption class="mono"><span><span lang="pt-BR">Produtos e margens</span><span lang="en">Products and margins</span></span><span>03</span></figcaption>
+            </figure>
+            <figure>
+              <div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>/painel/alertas</span></div><img src="../assets/img/olheiro/alertas.webp" alt="Avisos de mudança de preço" loading="lazy" width="2000" height="1250" /></div>
+              <figcaption class="mono"><span><span lang="pt-BR">Avisos</span><span lang="en">Alerts</span></span><span>04</span></figcaption>
+            </figure>
+            <figure class="phone">
+              <img src="../assets/img/olheiro/mobile.webp" alt="Painel no celular, com navegação inferior" loading="lazy" width="780" height="1688" />
+              <figcaption class="mono"><span><span lang="pt-BR">No celular (PWA)</span><span lang="en">On mobile (PWA)</span></span><span>05</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-sec">
+          <header>
+            <span class="mono">03</span>
+            <h2><span lang="pt-BR">Decisões</span><span lang="en">Decisions</span></h2>
+          </header>
+          <ol class="decisions" data-reveal>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Contornar um 403 do Mercado Livre</span><span lang="en">Working around a Mercado Livre 403</span></h3>
+                <p lang="pt-BR">O Mercado Livre não deixa apps lerem anúncios de outros vendedores: <code>/items</code> e <code>/sites/MLB/search</code> respondem 403. O catálogo continua aberto — <code>/products/{id}/items</code> lista quem vende cada produto, com preço. Cada concorrente guarda o <code>catalogo_id</code> e o preço sai dali. Anúncio fora do catálogo tenta o caminho direto, que volta a funcionar sozinho se o acesso for liberado.</p>
+                <p lang="en">Mercado Livre doesn't let apps read other sellers' listings: <code>/items</code> and <code>/sites/MLB/search</code> return 403. The catalogue is still open — <code>/products/{id}/items</code> lists who sells each product, with prices. Each competitor stores a <code>catalogo_id</code> and the price comes from there. Listings outside the catalogue try the direct route, which starts working again on its own if access is granted.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Pronto para a migração de preços</span><span lang="en">Ready for the pricing migration</span></h3>
+                <p lang="pt-BR">O Mercado Livre está mudando os preços para <code>/sale_price</code>. O cliente tenta esse recurso primeiro e cai no campo <code>price</code> de <code>/items</code> se não der.</p>
+                <p lang="en">Mercado Livre is moving prices to <code>/sale_price</code>. The client tries that first and falls back to the <code>price</code> field on <code>/items</code>.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Demonstração que não toca no banco</span><span lang="en">A demo that never touches the database</span></h3>
+                <p lang="pt-BR">Qualquer visitante abre <code>/demo</code> e navega no painel com dados de exemplo, mesmo em produção. O estado fica no <code>sessionStorage</code> da aba. Sem nenhuma variável configurada, o app inteiro sobe em modo demonstração.</p>
+                <p lang="en">Any visitor can open <code>/demo</code> and use the dashboard with sample data, even in production. State lives in the tab's <code>sessionStorage</code>. With no environment variables set, the whole app boots in demo mode.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Limite do plano conferido no servidor</span><span lang="en">Plan limits enforced on the server</span></h3>
+                <p lang="pt-BR">Adicionar concorrente passa por uma rota que confere o limite do plano antes de gravar. Preços e limites de cada plano ficam num arquivo só, <code>lib/planos.ts</code>.</p>
+                <p lang="en">Adding a competitor goes through a route that checks the plan limit before writing. Prices and limits for each plan live in a single file, <code>lib/planos.ts</code>.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3><span lang="pt-BR">Uma fila que respeita o plano</span><span lang="en">A queue that respects the plan</span></h3>
+                <p lang="pt-BR">O <code>pg_cron</code> do Supabase chama uma rota protegida a cada 15 minutos. Cada rodada pega os concorrentes mais atrasados, e o intervalo de cada um segue o plano do dono: 6 h, 3 h, 1 h ou 30 min. Na mesma rodada rodam a compra rápida do catálogo e o ajuste automático. O app em si roda em Cloudflare Workers com OpenNext, e o banco usa RLS.</p>
+                <p lang="en">Supabase's <code>pg_cron</code> calls a protected route every 15 minutes. Each run picks the most overdue competitors, and each one's interval follows its owner's plan: 6 h, 3 h, 1 h or 30 min. The catalogue quick-buy check and automatic repricing run in the same pass. The app itself runs on Cloudflare Workers via OpenNext, and the database uses RLS.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <nav class="next" aria-label="Próximo projeto">
+          <a href="imoboo-crm.html" data-curtain="Imoboo CRM">
+            <span class="mono"><span><span lang="pt-BR">Próximo</span><span lang="en">Next</span> — 03 / 04</span><span class="arrow">→</span></span>
+            <span class="display">Imoboo <em>CRM</em></span>
+          </a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap mono">
+        <span>© <span data-year>2026</span> Dávisson Falcão</span>
+        <a class="link-u" href="mailto:davissonfalcaosjr@gmail.com">davissonfalcaosjr@gmail.com</a>
+        <a class="link-u" href="#conteudo"><span lang="pt-BR">Voltar ao topo</span><span lang="en">Back to top</span> ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
