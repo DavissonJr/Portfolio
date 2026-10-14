@@ -1,176 +1,506 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" data-title-pt="Dávisson Falcão — Desenvolvedor full-stack" data-title-en="Dávisson Falcão — Full-stack developer">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dávisson Falcão · Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dávisson Falcão — Desenvolvedor full-stack</title>
+    <meta name="description" content="Dávisson Falcão, desenvolvedor full-stack (C#, .NET, Angular, React, Next.js). Trabalhos, experiência e contato." />
+    <meta name="theme-color" content="#efebe3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dávisson Falcão — Desenvolvedor full-stack" />
+    <meta property="og:description" content="C#, .NET, Angular, React e Next.js. Sistemas web de ponta a ponta." />
+    <meta property="og:image" content="assets/img/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/img/davisson.webp" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, th = null, lg = null;
+        try { th = localStorage.getItem("theme"); lg = localStorage.getItem("lang"); } catch (e) {}
+        if (th) d.dataset.theme = th;
+        d.lang = lg || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt-BR" : "en");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("anim");
+          setTimeout(function () { if (!window.gsap) d.classList.remove("anim"); }, 3000);
+        }
+        try {
+          if (sessionStorage.getItem("entering")) {
+            sessionStorage.removeItem("entering");
+            d.classList.add("is-entering");
+            setTimeout(function () { d.classList.remove("is-entering"); }, 2500);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
-    <div class="cyber-grid"></div>
-    <div class="noise"></div>
-    <div class="scanline"></div>
+    <a class="skip" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="curtain" aria-hidden="true"><span></span></div>
+    <div class="cursor" aria-hidden="true"><span></span></div>
+    <div class="preview" aria-hidden="true"><div class="preview-inner"></div></div>
 
-    <aside class="cyber-sidebar" id="cyberSidebar">
-      <div class="glitch-logo" data-text="DF">DF</div>
-      <nav class="cyber-nav">
-        <a href="#about" class="cyber-link" data-section="about">
-          <i class="fa-solid fa-user-astronaut"></i>
-          <span>>_ ABOUT</span>
-        </a>
-        <a href="#skills" class="cyber-link" data-section="skills">
-          <i class="fa-solid fa-microchip"></i>
-          <span>>_ STACK</span>
-        </a>
-        <a href="#experience" class="cyber-link" data-section="experience">
-          <i class="fa-solid fa-terminal"></i>
-          <span>>_ LOGS</span>
-        </a>
-        <a href="#projects" class="cyber-link" data-section="projects">
-          <i class="fa-solid fa-cube"></i>
-          <span>>_ REPOS</span>
-        </a>
-        <a href="#production" class="cyber-link" data-section="production">
-          <i class="fa-solid fa-satellite"></i>
-          <span>>_ DEPLOY</span>
-        </a>
-        <a href="#contact" class="cyber-link" data-section="contact">
-          <i class="fa-solid fa-radio"></i>
-          <span>>_ SIGNAL</span>
-        </a>
-      </nav>
-      <div class="cyber-footer">
-        <button id="cyberTheme" class="cyber-icon">
-          <i class="fa-solid fa-display"></i>
-        </button>
-        <div class="cyber-lang">
-          <button class="cyber-lang-btn" data-lang="en">[EN]</button>
-          <button class="cyber-lang-btn" data-lang="pt">[PT]</button>
+    <header class="head">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="Dávisson Falcão — início">Dávisson <em>F.</em> <small>Full-stack</small></a>
+        <nav class="nav" aria-label="Seções">
+          <a href="#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+          <a href="#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+          <a href="#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+          <a href="#arquivo"><span lang="pt-BR">Arquivo</span><span lang="en">Archive</span></a>
+          <a href="#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+        </nav>
+        <div class="tools">
+          <button class="tool" data-lang-toggle aria-label="Mudar idioma / Switch language"><span lang="pt-BR">EN</span><span lang="en">PT</span></button>
+          <button class="tool" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" /></svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+          </button>
+          <button class="tool menu-btn" aria-expanded="false" aria-controls="drawer">
+            <span lang="pt-BR" data-menu-label data-open="Menu" data-close="Fechar">Menu</span><span lang="en" data-menu-label data-open="Menu" data-close="Close">Menu</span>
+          </button>
         </div>
       </div>
-    </aside>
+    </header>
 
-    <div class="mobile-trigger" id="mobileTrigger">
-      <i class="fa-solid fa-bars-staggered"></i>
+    <div class="drawer" id="drawer">
+      <nav aria-label="Menu">
+        <a href="#trabalhos"><span lang="pt-BR">Trabalhos</span><span lang="en">Work</span></a>
+        <a href="#sobre"><span lang="pt-BR">Sobre</span><span lang="en">About</span></a>
+        <a href="#experiencia"><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></a>
+        <a href="#arquivo"><span lang="pt-BR">Arquivo</span><span lang="en">Archive</span></a>
+        <a href="#contato"><span lang="pt-BR">Contato</span><span lang="en">Contact</span></a>
+      </nav>
+      <p class="mono">davissonfalcaosjr@gmail.com</p>
     </div>
 
-    <main class="cyber-main">
-      <section id="about" class="cyber-section">
-        <div class="hero-grid">
-          <div class="hero-left">
-            <div class="status-led">
-              <span class="led-red"></span> SYSTEM ONLINE //
-              <span id="datetime"></span>
-            </div>
-            <div class="glitch-title">
-              <h1 class="glitch" data-text="DAVISSON FALCAO">
-                DAVISSON FALCAO
-              </h1>
-            </div>
-            <div class="terminal-line">
-              <span class="prompt">$</span>
-              <span id="terminalTyping" class="cmd-line"></span
-              ><span class="cursor-blink">_</span>
-            </div>
-            <p class="cyber-desc" id="aboutDesc">
-              Full-stack engineer & digital architect. Building the future one
-              line of code at a time.
+    <main id="conteudo">
+      <!-- ============================================================ HERO -->
+      <section class="hero" data-intro>
+        <div class="wrap">
+          <div class="hero-meta mono" data-reveal>
+            <span><span class="dot"></span><span lang="pt-BR">Desenvolvedor full-stack</span><span lang="en">Full-stack developer</span></span>
+            <span>ELogica — <span lang="pt-BR">desde 2025</span><span lang="en">since 2025</span></span>
+            <span><span lang="pt-BR">Brasil</span><span lang="en">Brazil</span> · <span data-clock>--:--</span> BRT</span>
+          </div>
+
+          <h1 class="hero-name" data-lines>
+            <span class="display l1"><span class="line"><span>Dávisson</span></span></span>
+            <span class="display l2">
+              <span class="hero-photo"><img src="assets/img/davisson.webp" alt="Retrato de Dávisson Falcão" width="1200" height="1500" fetchpriority="high" /></span>
+              <span class="line"><span><em>Falcão</em></span></span>
+            </span>
+          </h1>
+
+          <div class="hero-foot">
+            <p class="mono muted" data-reveal><span lang="pt-BR">Portfólio</span><span lang="en">Portfolio</span> · 2026</p>
+            <p class="lede" data-reveal>
+              <span lang="pt-BR">Faço sistemas web de ponta a ponta — da API em <em>C# e .NET</em> à tela em <em>Angular, React ou Next.js</em>. De dia na ELogica; fora dela, construo produtos inteiros.</span>
+              <span lang="en">I build web systems end to end — from the <em>C# and .NET</em> API to the <em>Angular, React or Next.js</em> screen. By day at ELogica; after hours, whole products of my own.</span>
             </p>
-            <div class="cyber-buttons">
-              <a
-                href="curriculo/CURRICULO DAVISSON FALCAO 2025.pdf"
-                download
-                class="cyber-btn primary"
-              >
-                <i class="fa-regular fa-file-zipper"></i> DOWNLOAD.CV
+            <a class="scroll-cue mono" href="#numeros" data-reveal><i></i><span lang="pt-BR">Role</span><span lang="en">Scroll</span></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>C#</span><b>/</b><span>.NET 8</span><b>/</b><span>Angular</span><b>/</b><span>TypeScript</span><b>/</b><span>React</span><b>/</b><span>Next.js</span><b>/</b><span>SQL Server</span><b>/</b><span>PostgreSQL</span><b>/</b><span>Docker</span><b>/</b><span>Node.js</span><b>/</b><span>Redis</span><b>/</b><span>Expo</span><b>/</b>
+          <span>C#</span><b>/</b><span>.NET 8</span><b>/</b><span>Angular</span><b>/</b><span>TypeScript</span><b>/</b><span>React</span><b>/</b><span>Next.js</span><b>/</b><span>SQL Server</span><b>/</b><span>PostgreSQL</span><b>/</b><span>Docker</span><b>/</b><span>Node.js</span><b>/</b><span>Redis</span><b>/</b><span>Expo</span><b>/</b>
+        </div>
+      </div>
+
+      <!-- ======================================================== NÚMEROS -->
+      <section class="section" id="numeros">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(01)</span>
+            <span><span lang="pt-BR">Em números</span><span lang="en">By the numbers</span></span>
+            <span><span lang="pt-BR">Trabalho e projetos</span><span lang="en">Job and projects</span></span>
+          </div>
+          <h2 class="display sec-title" data-lines>
+            <span class="line"><span><span lang="pt-BR">Coisas que dá</span><span lang="en">Things you can</span></span></span>
+            <span class="line"><span><span lang="pt-BR">pra <em class="accent">medir</em>.</span><span lang="en"><em class="accent">measure</em>.</span></span></span>
+          </h2>
+
+          <div class="figures">
+            <div class="figure" data-reveal>
+              <div class="num"><span class="from">40</span><span class="to">→</span><span data-count="3">3</span><span class="unit">min</span></div>
+              <p lang="pt-BR">Tempo de deploy depois de levar o build para Docker e automatizar a cópia de arquivos entre servidores via SMB.</p>
+              <p lang="en">Deploy time after moving the build into Docker and automating file transfer between servers over SMB.</p>
+              <span class="src mono">ELogica</span>
+            </div>
+            <div class="figure" data-reveal>
+              <div class="num"><span class="from">10</span><span class="to">→</span><span data-count="125">125</span></div>
+              <p lang="pt-BR">Documentos por operação, com download em chunks e o progresso acompanhado por polling na tela.</p>
+              <p lang="en">Documents per operation, using chunked downloads with progress tracked on screen via polling.</p>
+              <span class="src mono">ELogica</span>
+            </div>
+            <div class="figure" data-reveal>
+              <div class="num"><span data-count="130">130</span></div>
+              <p lang="pt-BR">Páginas no front web da Plataforma Pública — portal, painel, plenário e console —, além do app em Expo.</p>
+              <p lang="en">Pages in the Plataforma Pública web front end — portal, admin, plenary and console — plus the Expo app.</p>
+              <span class="src mono">Next.js 16 · 133 commits</span>
+            </div>
+            <div class="figure" data-reveal>
+              <div class="num"><span data-count="100">100</span></div>
+              <p lang="pt-BR">Verificações automáticas na API do Diário, rodando contra um Postgres de verdade compilado em WebAssembly.</p>
+              <p lang="en">Automated checks on the Diário API, running against a real Postgres compiled to WebAssembly.</p>
+              <span class="src mono">Diário · PGlite</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== TRABALHOS -->
+      <section class="section" id="trabalhos">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(02)</span>
+            <span><span lang="pt-BR">Trabalhos selecionados</span><span lang="en">Selected work</span></span>
+            <span>2025 — 2026</span>
+          </div>
+          <h2 class="display sec-title" data-lines>
+            <span class="line"><span><span lang="pt-BR">Quatro produtos,</span><span lang="en">Four products,</span></span></span>
+            <span class="line"><span><span lang="pt-BR">do banco <em>ao deploy</em>.</span><span lang="en">database <em>to deploy</em>.</span></span></span>
+          </h2>
+
+          <ol class="work">
+            <li class="work-row" data-reveal>
+              <a href="projetos/licitacao.html" data-preview="assets/img/capa-licitacao.svg" data-cursor="Ver" data-cursor-en="View" data-curtain="Plataforma Pública">
+                <span class="idx mono">01</span>
+                <h3>Plataforma <em>Pública</em></h3>
+                <p class="what">
+                  <span lang="pt-BR">Front web e mobile de uma plataforma para órgãos públicos: Diário Oficial, transparência, e-SIC e plenário com votação ao vivo.</span>
+                  <span lang="en">Web and mobile front end for a public-sector platform: official gazette, transparency, FOI requests and live plenary voting.</span>
+                  <span class="mono">Next.js 16 · Expo · Tailwind 4</span>
+                </p>
+                <span class="yr mono">2026</span>
+                <span class="go"><span class="arrow">↗</span></span>
+                <span class="thumb"><img src="assets/img/capa-licitacao.svg" alt="" loading="lazy" /></span>
               </a>
-              <button id="cyberContactBtn" class="cyber-btn secondary">
-                <i class="fa-solid fa-satellite-dish"></i> ESTABLISH.CONTACT
-              </button>
-            </div>
-            <div class="cyber-socials">
-              <div class="social-node" id="gitNode">
-                <i class="fa-brands fa-github"></i> <span>GITHUB</span>
+            </li>
+            <li class="work-row" data-reveal>
+              <a href="projetos/olheiro-de-preco.html" data-preview="assets/img/olheiro/landing.webp" data-cursor="Ver" data-cursor-en="View" data-curtain="Olheiro de Preço">
+                <span class="idx mono">02</span>
+                <h3>Olheiro de <em>Preço</em></h3>
+                <p class="what">
+                  <span lang="pt-BR">SaaS para quem vende no Mercado Livre: painel de vendas e aviso no Telegram quando um concorrente baixa o preço.</span>
+                  <span lang="en">SaaS for Mercado Livre sellers: a sales dashboard and a Telegram alert when a competitor drops their price.</span>
+                  <span class="mono">Next.js · Supabase · Cloudflare Workers</span>
+                </p>
+                <span class="yr mono">2026</span>
+                <span class="go"><span class="arrow">↗</span></span>
+                <span class="thumb"><img src="assets/img/olheiro/landing.webp" alt="" loading="lazy" /></span>
+              </a>
+            </li>
+            <li class="work-row" data-reveal>
+              <a href="projetos/imoboo-crm.html" data-preview="assets/img/capa-imoboo.svg" data-cursor="Ver" data-cursor-en="View" data-curtain="Imoboo CRM">
+                <span class="idx mono">03</span>
+                <h3>Imoboo <em>CRM</em></h3>
+                <p class="what">
+                  <span lang="pt-BR">CRM imobiliário com atendimento por WhatsApp assistido por IA — e um backend feito para chamar a IA o mínimo possível.</span>
+                  <span lang="en">Real-estate CRM with AI-assisted WhatsApp support — and a backend built to call the AI as little as possible.</span>
+                  <span class="mono">.NET · Angular · Claude API · Redis</span>
+                </p>
+                <span class="yr mono">2026</span>
+                <span class="go"><span class="arrow">↗</span></span>
+                <span class="thumb"><img src="assets/img/capa-imoboo.svg" alt="" loading="lazy" /></span>
+              </a>
+            </li>
+            <li class="work-row" data-reveal>
+              <a href="projetos/diario.html" data-preview="assets/img/capa-diario.svg" data-cursor="Ver" data-cursor-en="View" data-curtain="Diário">
+                <span class="idx mono">04</span>
+                <h3><em>Diário</em></h3>
+                <p class="what">
+                  <span lang="pt-BR">App de alimentação, água e hábitos que se instala no celular. Front e API no mesmo deploy, custo zero.</span>
+                  <span lang="en">Food, water and habit tracker that installs on your phone. Front end and API in one deploy, zero cost.</span>
+                  <span class="mono">React · Express · Postgres · PWA</span>
+                </p>
+                <span class="yr mono">2026</span>
+                <span class="go"><span class="arrow">↗</span></span>
+                <span class="thumb"><img src="assets/img/capa-diario.svg" alt="" loading="lazy" /></span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ========================================================== SOBRE -->
+      <section class="section" id="sobre">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(03)</span>
+            <span><span lang="pt-BR">Sobre</span><span lang="en">About</span></span>
+            <span>Dávisson Falcão Silva Júnior</span>
+          </div>
+          <div class="about">
+            <figure class="about-photo" data-reveal>
+              <img src="assets/img/davisson.webp" alt="Dávisson Falcão de camiseta preta, em fundo escuro" loading="lazy" data-parallax width="1200" height="1500" />
+              <figcaption class="mono">D.F. — 2026</figcaption>
+            </figure>
+            <div class="about-text">
+              <p class="big" data-reveal>
+                <span lang="pt-BR">Gosto de software que <em>aguenta o mundo real</em>: muita gente acessando ao mesmo tempo, sistema antigo que não pode parar, regra de negócio que ninguém escreveu.</span>
+                <span lang="en">I like software that <em>survives the real world</em>: lots of people at once, old systems that can't go down, business rules nobody ever wrote down.</span>
+              </p>
+              <div class="cols" data-reveal>
+                <div>
+                  <p lang="pt-BR">Comecei em 2024 como freelancer, fazendo sites e sistemas de gestão para pequenos negócios. Era eu do levantamento de requisitos até o deploy e a hospedagem.</p>
+                  <p lang="en">I started freelancing in 2024, building websites and management systems for small businesses. It was me from gathering requirements to deployment and hosting.</p>
+                  <p lang="pt-BR">Em janeiro de 2025 entrei na ELogica como estagiário e, em abril, fui efetivado como desenvolvedor full-stack. Trabalho com Angular 18, C# e .NET 8 em aplicações corporativas, com sistema novo e legado lado a lado.</p>
+                  <p lang="en">In January 2025 I joined ELogica as an intern and was hired as a full-stack developer that April. I work with Angular 18, C# and .NET 8 on enterprise applications, new and legacy systems side by side.</p>
+                </div>
+                <div>
+                  <p lang="pt-BR">Fora do expediente construo produtos completos, do banco ao deploy. É onde experimento com Next.js, Supabase, Cloudflare, Expo e IA aplicada.</p>
+                  <p lang="en">After hours I build complete products, database to deploy. That's where I experiment with Next.js, Supabase, Cloudflare, Expo and applied AI.</p>
+                  <p lang="pt-BR">Curso Sistemas de Informação na UNIASSELVI e falo inglês em nível B2.</p>
+                  <p lang="en">I'm studying Information Systems at UNIASSELVI and speak English at a B2 level.</p>
+                </div>
               </div>
-              <div class="social-node" id="liNode">
-                <i class="fa-brands fa-linkedin"></i> <span>LINKEDIN</span>
-              </div>
+              <ul class="facts" data-reveal>
+                <li><span class="mono"><span lang="pt-BR">Hoje</span><span lang="en">Now</span></span><span><span lang="pt-BR">Desenvolvedor full-stack na ELogica</span><span lang="en">Full-stack developer at ELogica</span></span></li>
+                <li><span class="mono"><span lang="pt-BR">Formação</span><span lang="en">Education</span></span><span><span lang="pt-BR">Bacharelado em Sistemas de Informação — UNIASSELVI, previsão 2028</span><span lang="en">B.Sc. in Information Systems — UNIASSELVI, expected 2028</span></span></li>
+                <li><span class="mono"><span lang="pt-BR">Idiomas</span><span lang="en">Languages</span></span><span><span lang="pt-BR">Português (nativo) · Inglês (B2)</span><span lang="en">Portuguese (native) · English (B2)</span></span></li>
+                <li><span class="mono"><span lang="pt-BR">Cursos</span><span lang="en">Courses</span></span><span><span lang="pt-BR">Alura — C# orientado a objetos, SQL Server avançado, Angular avançado · Danki Code — Front-end, React, Vue.js, Scrum</span><span lang="en">Alura — Object-oriented C#, advanced SQL Server, advanced Angular · Danki Code — Front-end, React, Vue.js, Scrum</span></span></li>
+              </ul>
             </div>
           </div>
-          <div class="hero-right">
-            <div class="hologram-avatar">
-              <div class="scan-ring"></div>
-              <div class="scan-ring-2"></div>
-              <img src="imgs/fotoeu.jpeg" alt="Dávisson" />
-              <div class="avatar-stats">
-                <div class="stat-bar">
-                  <span>XP_LEVEL</span> <span>[||||||||||] 92%</span>
-                </div>
-                <div class="stat-bar">
-                  <span>ENERGY</span> <span>[||||||||||] 100%</span>
-                </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== EXPERIÊNCIA -->
+      <section class="section" id="experiencia">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(04)</span>
+            <span><span lang="pt-BR">Experiência</span><span lang="en">Experience</span></span>
+            <span>2024 — <span lang="pt-BR">hoje</span><span lang="en">now</span></span>
+          </div>
+          <ol class="xp">
+            <li data-reveal>
+              <span class="when mono"><span lang="pt-BR">Abr 2025 — hoje</span><span lang="en">Apr 2025 — now</span></span>
+              <div>
+                <h3><span lang="pt-BR">Desenvolvedor Full-Stack</span><span lang="en">Full-Stack Developer</span></h3>
+                <span class="org mono">ELogica</span>
               </div>
+              <ul lang="pt-BR">
+                <li>Deploy de cerca de 40 minutos para <strong>menos de 3</strong>, migrando o build para Docker e automatizando a transferência de arquivos entre servidores via SMB.</li>
+                <li>Download de documentos em chunks: de <strong>10 para 125 documentos</strong> por operação, com indicador de progresso via polling.</li>
+                <li>Processamento automatizado de documentos e geração de PDF em aplicações corporativas.</li>
+                <li>Componentes reutilizáveis e padrões de arquitetura em Angular 18; APIs REST em C# e .NET 8 com SQL Server; integração com serviços externos.</li>
+                <li>Monitoramento com Grafana e Prometheus, modernização de sistemas legados, Scrum e Kanban.</li>
+              </ul>
+              <ul lang="en">
+                <li>Cut deploys from about 40 minutes to <strong>under 3</strong> by moving the build into Docker and automating file transfer between servers over SMB.</li>
+                <li>Chunked document downloads: from <strong>10 to 125 documents</strong> per operation, with a polling-based progress indicator.</li>
+                <li>Automated document processing and PDF generation for enterprise applications.</li>
+                <li>Reusable components and architecture patterns in Angular 18; REST APIs in C# and .NET 8 with SQL Server; external service integrations.</li>
+                <li>Monitoring with Grafana and Prometheus, legacy modernization, Scrum and Kanban.</li>
+              </ul>
+            </li>
+            <li data-reveal>
+              <span class="when mono"><span lang="pt-BR">Jan — Abr 2025</span><span lang="en">Jan — Apr 2025</span></span>
+              <div>
+                <h3><span lang="pt-BR">Estagiário de Desenvolvimento</span><span lang="en">Software Development Intern</span></h3>
+                <span class="org mono">ELogica</span>
+              </div>
+              <ul lang="pt-BR">
+                <li>Refatoração de código legado para arquiteturas modernas em .NET e Angular.</li>
+                <li>Funcionalidades de ponta a ponta com C#, TypeScript e SQL, aplicando SOLID.</li>
+              </ul>
+              <ul lang="en">
+                <li>Refactored legacy code into modern .NET and Angular architectures.</li>
+                <li>Built end-to-end features with C#, TypeScript and SQL, applying SOLID.</li>
+              </ul>
+            </li>
+            <li data-reveal>
+              <span class="when mono"><span lang="pt-BR">Jun 2024 — Jan 2025</span><span lang="en">Jun 2024 — Jan 2025</span></span>
+              <div>
+                <h3><span lang="pt-BR">Desenvolvedor Freelancer</span><span lang="en">Freelance Developer</span></h3>
+                <span class="org mono"><span lang="pt-BR">Remoto</span><span lang="en">Remote</span></span>
+              </div>
+              <ul lang="pt-BR">
+                <li>Aplicações web responsivas e sistemas de gestão para pequenas e médias empresas.</li>
+                <li>React, Vue.js, Node.js, MongoDB e SQL — do levantamento de requisitos ao deploy e à hospedagem, direto com o cliente.</li>
+              </ul>
+              <ul lang="en">
+                <li>Responsive web apps and management systems for small and mid-sized businesses.</li>
+                <li>React, Vue.js, Node.js, MongoDB and SQL — from requirements to deployment and hosting, working directly with clients.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================================================== FERRAMENTAS -->
+      <section class="section" id="ferramentas">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(05)</span>
+            <span><span lang="pt-BR">Ferramentas</span><span lang="en">Tools</span></span>
+            <span></span>
+          </div>
+          <div class="stack" data-reveal>
+            <div>
+              <h4 class="mono"><span lang="pt-BR">Linguagens</span><span lang="en">Languages</span></h4>
+              <ul><li class="daily">C#</li><li class="daily">TypeScript</li><li>JavaScript</li><li class="daily">SQL</li><li>HTML</li><li>CSS / SASS</li></ul>
             </div>
+            <div>
+              <h4 class="mono">Front-end</h4>
+              <ul><li class="daily">Angular</li><li>React</li><li>Next.js</li><li>Vue.js</li><li>Tailwind CSS</li><li>React Native · Expo</li></ul>
+            </div>
+            <div>
+              <h4 class="mono">Back-end</h4>
+              <ul><li class="daily">.NET 8</li><li>EF Core</li><li class="daily">APIs REST</li><li>Node.js · Express</li><li class="daily">SOLID</li></ul>
+            </div>
+            <div>
+              <h4 class="mono"><span lang="pt-BR">Dados</span><span lang="en">Data</span></h4>
+              <ul><li class="daily">SQL Server</li><li>PostgreSQL</li><li>Supabase</li><li>Redis</li><li>MongoDB</li></ul>
+            </div>
+            <div>
+              <h4 class="mono">Infra</h4>
+              <ul><li class="daily">Docker</li><li class="daily">CI/CD</li><li>Azure DevOps</li><li class="daily">Git</li><li>Vercel</li><li>Cloudflare Workers</li></ul>
+            </div>
+            <div>
+              <h4 class="mono"><span lang="pt-BR">Observ. e IA</span><span lang="en">Observ. &amp; AI</span></h4>
+              <ul><li>Grafana</li><li>Prometheus</li><li>Claude API</li><li>Gemini API</li></ul>
+            </div>
+          </div>
+          <p class="stack-note mono"><i></i><span lang="pt-BR">Uso no dia a dia na ELogica</span><span lang="en">Used daily at ELogica</span></p>
+        </div>
+      </section>
+
+      <!-- ========================================================= ARQUIVO -->
+      <section class="section" id="arquivo">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(06)</span>
+            <span><span lang="pt-BR">Arquivo</span><span lang="en">Archive</span></span>
+            <span><span lang="pt-BR">Projetos anteriores</span><span lang="en">Earlier projects</span></span>
+          </div>
+          <table class="archive" data-reveal>
+            <thead class="mono">
+              <tr>
+                <th><span lang="pt-BR">Projeto</span><span lang="en">Project</span></th>
+                <th><span lang="pt-BR">O que é</span><span lang="en">What it is</span></th>
+                <th>Stack</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Quilombo Sertão do Moxotó</td>
+                <td class="desc"><span lang="pt-BR">Site de projeto de pesquisa do CNPq sobre patrimônio quilombola e direitos territoriais.</span><span lang="en">Website for a CNPq research project on quilombola heritage and land rights.</span></td>
+                <td class="tech mono"><span lang="pt-BR">Em produção</span><span lang="en">Live</span></td>
+                <td class="links mono"><a class="link-u" href="http://quilombosertaodomoxoto.com.br/" target="_blank" rel="noopener">Site <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/kiquiz.webp">
+                <td>KiQuiz</td>
+                <td class="desc"><span lang="pt-BR">Quiz gerado por IA a partir de qualquer tema.</span><span lang="en">AI-generated quiz on any topic.</span></td>
+                <td class="tech mono">React · Gemini</td>
+                <td class="links mono"><a class="link-u" href="https://study-app-ia.vercel.app/" target="_blank" rel="noopener">Demo <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/KiQuiz-IA" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/hr-system.webp">
+                <td>HR System</td>
+                <td class="desc"><span lang="pt-BR">Sistema de gestão de RH full-stack.</span><span lang="en">Full-stack HR management system.</span></td>
+                <td class="tech mono">.NET</td>
+                <td class="links mono"><a class="link-u" href="https://github.com/DavissonJr/hr-management-system" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/courses-api.webp">
+                <td>Courses API</td>
+                <td class="desc"><span lang="pt-BR">API REST para gestão de cursos.</span><span lang="en">REST API for course management.</span></td>
+                <td class="tech mono">.NET · REST</td>
+                <td class="links mono"><a class="link-u" href="https://github.com/DavissonJr/api-gerenciamento-cursos" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/animefind.webp">
+                <td>AnimeFind</td>
+                <td class="desc"><span lang="pt-BR">Busca de animes consumindo a Jikan API.</span><span lang="en">Anime search on top of the Jikan API.</span></td>
+                <td class="tech mono">JavaScript · Jikan</td>
+                <td class="links mono"><a class="link-u" href="https://animefind.vercel.app/" target="_blank" rel="noopener">Demo <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/animefind" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/income-tracker.webp">
+                <td>Income Tracker</td>
+                <td class="desc"><span lang="pt-BR">Controle de finanças pessoais.</span><span lang="en">Personal finance tracker.</span></td>
+                <td class="tech mono">Vue.js</td>
+                <td class="links mono"><a class="link-u" href="https://controle-de-financas-seven.vercel.app/" target="_blank" rel="noopener">Demo <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/Controle-de-Financas" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/hotdog.webp">
+                <td>HotDog Simulator</td>
+                <td class="desc"><span lang="pt-BR">Sistema de lanchonete com CRUD de pedidos.</span><span lang="en">Snack bar system with order CRUD.</span></td>
+                <td class="tech mono">Vue.js</td>
+                <td class="links mono"><a class="link-u" href="https://www.instagram.com/p/DEQsqwNK3ab/" target="_blank" rel="noopener"><span lang="pt-BR">Vídeo</span><span lang="en">Video</span> <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/delicioushotdog" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/memory-game.webp">
+                <td>Memory Game</td>
+                <td class="desc"><span lang="pt-BR">Jogo da memória com tema de One Piece.</span><span lang="en">One Piece–themed memory game.</span></td>
+                <td class="tech mono">JavaScript</td>
+                <td class="links mono"><a class="link-u" href="https://onepiece-memorygame.vercel.app/" target="_blank" rel="noopener">Demo <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/Memory-Game" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+              <tr data-preview="assets/img/arquivo/todo.webp">
+                <td>Todo List</td>
+                <td class="desc"><span lang="pt-BR">Gerenciador de tarefas.</span><span lang="en">Task manager.</span></td>
+                <td class="tech mono">Vue.js</td>
+                <td class="links mono"><a class="link-u" href="https://todo-vuejs-peach.vercel.app/" target="_blank" rel="noopener">Demo <span class="arrow">↗</span></a><a class="link-u" href="https://github.com/DavissonJr/todo-vuejs" target="_blank" rel="noopener"><span lang="pt-BR">Código</span><span lang="en">Code</span> <span class="arrow">↗</span></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ========================================================= CONTATO -->
+      <section class="contact" id="contato">
+        <div class="wrap">
+          <div class="sec-head mono">
+            <span>(07)</span>
+            <span><span lang="pt-BR">Contato</span><span lang="en">Contact</span></span>
+            <span data-clock>--:--</span>
+          </div>
+          <h2 class="display" data-lines>
+            <span class="line"><span><span lang="pt-BR">Bora</span><span lang="en">Let's</span></span></span>
+            <span class="line"><span><em><span lang="pt-BR">conversar.</span><span lang="en">talk.</span></em></span></span>
+          </h2>
+          <div class="mail" data-reveal>
+            <a class="link-u" href="mailto:davissonfalcaosjr@gmail.com">davissonfalcaosjr@gmail.com</a>
+            <button class="copy mono" data-copy="davissonfalcaosjr@gmail.com"><span lang="pt-BR">Copiar</span><span lang="en">Copy</span></button>
+          </div>
+          <div class="channels" data-reveal>
+            <a href="https://www.linkedin.com/in/davisson-falcao/" target="_blank" rel="noopener">
+              <span class="mono">LinkedIn</span><strong>/davisson-falcao <span class="arrow">↗</span></strong>
+            </a>
+            <a href="https://github.com/DavissonJr" target="_blank" rel="noopener">
+              <span class="mono">GitHub</span><strong>@DavissonJr <span class="arrow">↗</span></strong>
+            </a>
+            <a href="https://wa.me/558196533458" target="_blank" rel="noopener">
+              <span class="mono">WhatsApp</span><strong>+55 81 9653-3458 <span class="arrow">↗</span></strong>
+            </a>
+            <a href="curriculo/Davisson_Falcao_FullStack_CV_PT.pdf" download>
+              <span class="mono"><span lang="pt-BR">Currículo</span><span lang="en">Résumé</span> · PDF</span><strong><span lang="pt-BR">Português</span><span lang="en">Portuguese</span> <span class="arrow">↓</span></strong>
+            </a>
+            <a href="curriculo/Davisson_Falcao_FullStack_CV_EN.pdf" download>
+              <span class="mono"><span lang="pt-BR">Currículo</span><span lang="en">Résumé</span> · PDF</span><strong>English <span class="arrow">↓</span></strong>
+            </a>
           </div>
         </div>
       </section>
-
-      <section id="skills" class="cyber-section">
-        <div class="section-header">
-          <span class="section-badge">// $ echo $SKILLS</span>
-          <h2>TECHNOLOGY_MATRIX</h2>
-        </div>
-        <div class="matrix-grid" id="matrixGrid"></div>
-      </section>
-
-      <section id="experience" class="cyber-section">
-        <div class="section-header">
-          <span class="section-badge">// $ cat experience.log</span>
-          <h2>TERMINAL_LOGS</h2>
-        </div>
-        <div class="timeline-terminal" id="timelineTerminal"></div>
-      </section>
-
-      <section id="projects" class="cyber-section">
-        <div class="section-header">
-          <span class="section-badge">// $ ls -la /projects</span>
-          <h2>DEPLOYED_NODES</h2>
-        </div>
-        <div class="project-hologrid" id="projectHologrid"></div>
-      </section>
-
-      <section id="production" class="cyber-section">
-        <div class="section-header">
-          <span class="section-badge">// $ curl -s production.cnpq</span>
-          <h2>LIVE_DEPLOYMENT</h2>
-        </div>
-        <div class="production-node" id="productionNode"></div>
-      </section>
-
-      <section id="contact" class="cyber-section">
-        <div class="section-header">
-          <span class="section-badge">// $ ping -c 4 contact</span>
-          <h2>OPEN_CHANNELS</h2>
-        </div>
-        <div class="contact-grid" id="contactGrid"></div>
-      </section>
-
-      <footer class="cyber-footer-main">
-        <p>
-          (c) 2025 DAVISSON FALCAO //
-          <span id="footerCopy">ROOT_ACCESS_GRANTED</span>
-        </p>
-      </footer>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="foot">
+      <div class="wrap mono">
+        <span>© <span data-year>2026</span> Dávisson Falcão</span>
+        <span><span lang="pt-BR">HTML, CSS e JavaScript, sem framework</span><span lang="en">HTML, CSS and JavaScript, no framework</span></span>
+        <a class="link-u" href="#conteudo"><span lang="pt-BR">Voltar ao topo</span><span lang="en">Back to top</span> ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
